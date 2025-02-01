@@ -27,3 +27,6 @@ SA Presentation resources: https://webpages.uidaho.edu/drbc/cs383/assignments/04
 StoryBoard Marking Key: https://webpages.uidaho.edu/drbc/cs383/assignments/04b_StoryboardMarkingKey.pdf
 
 383 General page: https://webpages.uidaho.edu/drbc/cs383/index.html
+
+<img width="265" alt="image" src="https://github.com/user-attachments/assets/5e5b16ab-5d51-46c1-856b-ce4dadd17908" />
+
