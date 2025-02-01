@@ -9,6 +9,14 @@ https://www.youtube.com/watch?v=q_xBd7Wj6sw
 SA assignent:
 https://www.youtube.com/watch?v=sLY3DvsdHDc
 
+### TL2 Presentation/resources
+
+Video supercut:  https://youtu.be/0y2aviM7xrQ
+
+mobile resources:  https://youtu.be/ruuNwB2h3yA
+
+Github for TL2 Presentation: https://github.com/JakeG2004/CS383_TL2_Platformer 
+
 ### Dr. BC references 
 Champion Document Resources: https://webpages.uidaho.edu/drbc/cs383/assignments/Champion.html
 
