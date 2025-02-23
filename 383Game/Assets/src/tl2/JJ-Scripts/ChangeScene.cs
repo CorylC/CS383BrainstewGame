@@ -14,6 +14,19 @@ public class ChangeScene : MonoBehaviour
 
     public void quitGame()
     {
-        Application.Quit();
+        Application.Quit(); //when game is built and for the quit button
+
+        #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+        #endif
+    }
+
+    private void Update()
+    {
+        //check for 'Q' key press to quit the game as a shortcut (alt to pressing quit button)
+        if(Input.GetKeyDown(KeyCode.Q))
+        {
+            quitGame();
+        }
     }
 }
