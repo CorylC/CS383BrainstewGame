@@ -1,0 +1,1 @@
+This folder will contain sprites and game graphic assets. Organize them in folders for easier finding
