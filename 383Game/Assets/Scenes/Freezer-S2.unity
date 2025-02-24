@@ -422,9 +422,11 @@ GameObject:
   m_Component:
   - component: {fileID: 393993775}
   - component: {fileID: 393993774}
+  - component: {fileID: 393993777}
+  - component: {fileID: 393993776}
   m_Layer: 0
   m_Name: DroneGFX
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -499,6 +501,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1830138413}
   m_LocalEulerAnglesHint: {x: -179.649, y: 0, z: 0}
+--- !u!114 &393993776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393993773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b3f54f14b2794166ae81ebf2c5b8129, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealth: {fileID: 0}
+  damage: 10
+--- !u!114 &393993777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393993773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39b9b807a048d43d999cb988bcc457d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  baseAttackDmg: 10
 --- !u!1 &406088359
 GameObject:
   m_ObjectHideFlags: 0
@@ -25844,6 +25874,7 @@ GameObject:
   - component: {fileID: 2083489861}
   - component: {fileID: 2083489862}
   - component: {fileID: 2083489863}
+  - component: {fileID: 2083489864}
   m_Layer: 0
   m_Name: GroundEnemy
   m_TagString: Enemy
@@ -26052,6 +26083,20 @@ MonoBehaviour:
   rigidbody: {fileID: 2083489858}
   speed: 7
   force: 20
+--- !u!114 &2083489864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083489855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39b9b807a048d43d999cb988bcc457d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  baseAttackDmg: 10
 --- !u!4 &2099357631
 Transform:
   m_ObjectHideFlags: 0
