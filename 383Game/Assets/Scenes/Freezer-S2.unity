@@ -25842,8 +25842,10 @@ GameObject:
   - component: {fileID: 2083489858}
   - component: {fileID: 2083489860}
   - component: {fileID: 2083489861}
+  - component: {fileID: 2083489862}
+  - component: {fileID: 2083489863}
   m_Layer: 0
-  m_Name: TestEnemy
+  m_Name: GroundEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25927,11 +25929,11 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2083489855}
-  m_BodyType: 2
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
@@ -25945,7 +25947,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 6
 --- !u!61 &2083489859
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26013,7 +26015,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2083489855}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bf7f444c1b25449bae48053a47560af, type: 3}
   m_Name: 
@@ -26021,6 +26023,35 @@ MonoBehaviour:
   _horGoal: 30
   _vertGoal: 0
   _moveTime: 5
+--- !u!114 &2083489862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083489855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30d059dc5c93941f490a7516f892fa4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1603883553}
+  walkable: {fileID: 2083489863}
+--- !u!114 &2083489863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083489855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b55203f2a01454ff1975d4dec4e2e1ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody: {fileID: 2083489858}
+  speed: 7
+  force: 20
 --- !u!4 &2099357631
 Transform:
   m_ObjectHideFlags: 0
