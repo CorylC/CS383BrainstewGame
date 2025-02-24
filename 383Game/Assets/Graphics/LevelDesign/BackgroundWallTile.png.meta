@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 66854a0e97a990a4fa4349306bdc9772
+guid: 966a04059ccd75e47beb421b9c01c190
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 437698006552340027
-    second: WallTile2_0
+      213: -2251725699186106642
+    second: BackgroundWallTile_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WallTile2_0
+      name: BackgroundWallTile_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 283
-        height: 227
+        width: 325
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b36e2779404031600800000000000000
-      internalID: 437698006552340027
+      spriteID: eeed460286340c0e0800000000000000
+      internalID: -2251725699186106642
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      WallTile2_0: 437698006552340027
+      BackgroundWallTile_0: -2251725699186106642
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f8ca97c230e98144388024ed93133461
+guid: 5742a4278ab9aea4ea87f2709302d3f4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2025238336202115944
-    second: PartiallyFrozenCrate_0
+      213: -552762098770417527
+    second: VentilatorTile_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 128
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PartiallyFrozenCrate_0
+      name: VentilatorTile_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 316
-        height: 320
+        width: 230
+        height: 228
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8947b21a678e4e3e0800000000000000
-      internalID: -2025238336202115944
+      spriteID: 9886d71ccc13458f0800000000000000
+      internalID: -552762098770417527
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PartiallyFrozenCrate_0: -2025238336202115944
+      VentilatorTile_0: -552762098770417527
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

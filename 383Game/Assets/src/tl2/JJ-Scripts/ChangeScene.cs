@@ -14,6 +14,7 @@ public class ChangeScene : MonoBehaviour
 
     public void quitGame()
     {
+        Debug.Log("Quitting the game...");
         Application.Quit(); //when game is built and for the quit button
 
         #if UNITY_EDITOR

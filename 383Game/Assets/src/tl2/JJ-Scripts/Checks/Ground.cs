@@ -1,5 +1,6 @@
 using UnityEngine;
 
+//a script dedicated to ground checking for the player
 public class Ground : MonoBehaviour
 {
     public bool OnGround{get; private set;}
