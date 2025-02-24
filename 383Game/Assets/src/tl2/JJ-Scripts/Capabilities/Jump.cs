@@ -7,18 +7,20 @@ public class Jump : MonoBehaviour
     [SerializeField,Range(0,5)] private int _maxAirJumps = 0;
     [SerializeField,Range(0f,5f)] private float _upwardMovementMultiplier = 1.7f;
     [SerializeField,Range(0f,5f)] private float _downwardMovementMultiplier = 3f;
+    [SerializeField,Range(0f,10f)] private float _fastFallMultiplier = 2f;
     
     private CONTROLLER _controller;
     private Rigidbody2D _body;
     private Ground _ground;
     private Vector2 _velocity;
 
-    public AudioSource jump;
+    public AudioSource jump; //TL1
 
     private int _jumpPhase;
     private float _defaultGravityScale,_jumpSpeed;
 
     private bool _desiredJump,_onGround;
+    private bool _fastFalling = false;
 
     //this is start state before first frame update
     void Awake()
@@ -26,7 +28,7 @@ public class Jump : MonoBehaviour
         _body = GetComponent<Rigidbody2D>();
         _ground = GetComponent<Ground>();
         _controller = GetComponent<CONTROLLER>();
-        jump = GetComponent<AudioSource>();
+        jump = GetComponent<AudioSource>(); //TL1
 
 
         _defaultGravityScale = 1f;
@@ -36,12 +38,13 @@ public class Jump : MonoBehaviour
     void Update()
     {
         _desiredJump |= _controller.input.RetrieveJumpInput();
+        _fastFalling = _controller.input.RetrieveFastFallInput();
     }
 
     private void FixedUpdate()
     {
         _onGround = _ground.OnGround;
-        _velocity = _body.linearVelocity;
+    _velocity = _body.linearVelocity;
 
         if(_onGround)
         {
@@ -59,7 +62,14 @@ public class Jump : MonoBehaviour
         }
         else if(_body.linearVelocity.y < 0)
         {
-            _body.gravityScale = _downwardMovementMultiplier;
+            if (_fastFalling)
+            {
+                _body.gravityScale = _fastFallMultiplier * _downwardMovementMultiplier;
+            }
+            else
+            {
+                _body.gravityScale = _downwardMovementMultiplier;
+            }
         }
         else if(_body.linearVelocity.y == 0)
         {
@@ -67,7 +77,7 @@ public class Jump : MonoBehaviour
         }
 
         _body.linearVelocity = _velocity;
-    }
+}
 
 
 
