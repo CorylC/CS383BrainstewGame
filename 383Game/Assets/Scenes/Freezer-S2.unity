@@ -1188,6 +1188,7 @@ MonoBehaviour:
   _maxAirJumps: 0
   _upwardMovementMultiplier: 1.7
   _downwardMovementMultiplier: 3
+  jump: {fileID: 0}
 --- !u!114 &1603883561
 MonoBehaviour:
   m_ObjectHideFlags: 0

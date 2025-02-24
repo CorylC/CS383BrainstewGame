@@ -13,6 +13,8 @@ public class Jump : MonoBehaviour
     private Ground _ground;
     private Vector2 _velocity;
 
+    public AudioSource jump;
+
     private int _jumpPhase;
     private float _defaultGravityScale,_jumpSpeed;
 
@@ -24,6 +26,8 @@ public class Jump : MonoBehaviour
         _body = GetComponent<Rigidbody2D>();
         _ground = GetComponent<Ground>();
         _controller = GetComponent<CONTROLLER>();
+        jump = GetComponent<AudioSource>();
+
 
         _defaultGravityScale = 1f;
     }
@@ -84,6 +88,7 @@ public class Jump : MonoBehaviour
             }
 
             _velocity.y += _jumpSpeed;
+            jump.Play();
         }
     }
 }
