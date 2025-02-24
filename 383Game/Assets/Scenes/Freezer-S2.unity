@@ -760,7 +760,7 @@ MonoBehaviour:
       Size: {x: 0.8, y: 0.8}
       Offset: {x: 0, y: 0}
   CenterOnActivate: 0
-  TargetOffset: {x: 0, y: 2, z: 0}
+  TargetOffset: {x: 0, y: 1, z: 0}
   Damping: {x: 1, y: 1, z: 1}
   Lookahead:
     Enabled: 0
@@ -819,7 +819,7 @@ Transform:
   m_GameObject: {fileID: 1082229540}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: -10}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -913,7 +913,7 @@ Transform:
   m_GameObject: {fileID: 1240128405}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: -10}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25351,7 +25351,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -295, y: 187.48502}
+  m_AnchoredPosition: {x: -287.9, y: 184.2}
   m_SizeDelta: {x: 125.7404, y: 16.8386}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2051528928
@@ -25584,7 +25584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 1603883561}
-  damage: 5
+  damage: 10
 --- !u!4 &2099357631
 Transform:
   m_ObjectHideFlags: 0

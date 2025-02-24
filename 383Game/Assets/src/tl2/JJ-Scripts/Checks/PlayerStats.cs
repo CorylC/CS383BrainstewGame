@@ -37,7 +37,8 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-    //any time another script calls this function, it can send in however much dmg it sends to player
+    //any time another script calls this function, it can send in however much dmg it sends to playe
+    //enemies will ref this class and function so player can take dmg from contact hits or projectiles
     public void TakeDamage(float damage)
     {
         health -= damage;
