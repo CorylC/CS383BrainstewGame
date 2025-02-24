@@ -6,8 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/MainMenu-S1.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Freezer-S2.unity
+    guid: 909722af2c640d849a2751bd4cc636be
+  - enabled: 1
+    path: Assets/Scenes/Amazoon-S3.unity
+    guid: 00214ab88b2d1564da828ef13cfccd87
+  - enabled: 1
+    path: Assets/Scenes/JimmyBeez-S4.unity
+    guid: fc8bde6b17d6ab04bbb0a218a4da4fc2
+  - enabled: 1
+    path: Assets/Scenes/GameOver-Death.unity
+    guid: 72a81712e6e3f0f41a18641fc6217232
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
