@@ -4,47 +4,65 @@ using UnityEngine;
 
 public class SimpleWeapon2D : MonoBehaviour
 {
-    public GameObject projectilePrefab; // The projectile to shoot
-    public Transform firePoint; // The point from where the projectile will be fired
+    public GameObject projectilePrefab; // Reference to the projectile prefab
+    public Transform firePoint; // Where the projectile is spawned
     public float projectileSpeed = 10f; // Speed of the projectile
+    public float spawnOffset = 0.5f; // Offset to avoid self-collision
+
+    private Camera mainCamera;
+
+    private void Start()
+    {
+        mainCamera = Camera.main;
+    }
 
     private void Update()
     {
-        // Rotate the fire point to always face the mouse position
-        RotateFirePoint();
-
-        // Shoot when the left mouse button is clicked
-        if (Input.GetMouseButtonDown(0)) // 0 is the left mouse button
+        if (Input.GetMouseButtonDown(0)) // Left mouse button
         {
-            Shoot();
+            CheckForEnemyClick();
         }
     }
 
-    void RotateFirePoint()
+    void CheckForEnemyClick()
     {
         // Get the mouse position in world space
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
 
-        // Calculate the direction from the fire point to the mouse position
-        Vector2 direction = mousePosition - firePoint.position;
+        // Perform a raycast to detect if an enemy was clicked
+        RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
 
-        // Calculate the angle to rotate the fire point
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
-        // Apply rotation to the fire point
-        firePoint.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        if (hit.collider != null && hit.collider.CompareTag("Enemy"))
+        {
+            Debug.Log("Enemy clicked: " + hit.collider.name);
+            Shoot(hit.collider.transform.position);
+        }
+        else
+        {
+            Debug.Log("Clicked on " + (hit.collider != null ? hit.collider.name : "empty space"));
+        }
     }
 
-    void Shoot()
+    void Shoot(Vector3 targetPosition)
     {
-        GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
-        Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
+        Debug.Log("Shooting a projectile!");
 
+        // Calculate direction from firePoint to the target position
+        Vector3 direction = (targetPosition - firePoint.position).normalized;
+
+        // Rotate the firePoint to face the target direction
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        firePoint.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+
+        // Calculate the spawn position with an offset
+        Vector3 spawnPosition = firePoint.position + direction * spawnOffset;
+
+        // Create the projectile and set its direction
+        GameObject projectile = Instantiate(projectilePrefab, spawnPosition, firePoint.rotation);
+        Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
-            rb.linearVelocity = firePoint.right * projectileSpeed; // Ensure the projectile moves in the facing direction
+            rb.linearVelocity = direction * projectileSpeed;
         }
-
-        Debug.Log("Projectile shot at angle: " + firePoint.rotation.eulerAngles.z);
     }
 }
