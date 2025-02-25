@@ -6,7 +6,7 @@ public class EnemyTakeDamage : MonoBehaviour
     public float damage = 10f;
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if(collision.gameObject.tag == "Enemy")
         {
             enemyHealth.TakeDamage(damage);
         }

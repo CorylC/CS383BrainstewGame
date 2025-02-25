@@ -8,7 +8,7 @@ public class GroundMovement : MonoBehaviour
     private void Update() {
     if (target != null) {
         var directionTowardsTarget = (target.position - this.transform.position).normalized;
-        walkable.MoveTo(directionTowardsTarget);
+        walkable.moveTo(directionTowardsTarget);
 
         Debug.Log($"Target Position: {target.position}, Enemy Position: {transform.position}, Direction: {directionTowardsTarget}");
     }
