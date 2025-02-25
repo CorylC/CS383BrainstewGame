@@ -179,10 +179,10 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: db4d0246bc6e8744caf90b3f2773b2d4, type: 3}
   m_Resource: {fileID: 8300000, guid: db4d0246bc6e8744caf90b3f2773b2d4, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.338
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -25992,7 +25992,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -287.9, y: 184.2}
+  m_AnchoredPosition: {x: -229.5, y: 152.7}
   m_SizeDelta: {x: 125.7404, y: 16.8386}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2051528928
@@ -26062,7 +26062,6 @@ GameObject:
   - component: {fileID: 2083489859}
   - component: {fileID: 2083489858}
   - component: {fileID: 2083489860}
-  - component: {fileID: 2083489861}
   - component: {fileID: 2083489862}
   - component: {fileID: 2083489863}
   - component: {fileID: 2083489864}
@@ -26230,21 +26229,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 1603883561}
   damage: 10
---- !u!114 &2083489861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2083489855}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bf7f444c1b25449bae48053a47560af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _horGoal: 30
-  _vertGoal: 0
-  _moveTime: 5
 --- !u!114 &2083489862
 MonoBehaviour:
   m_ObjectHideFlags: 0
