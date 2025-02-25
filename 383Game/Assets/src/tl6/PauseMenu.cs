@@ -32,9 +32,9 @@ public class PauseManager : MonoBehaviour
         isPaused = false;
     }
 
-    public void mainMenu(){
+    public void mainMenu(int sceneID){
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene(sceneID);
     }
 
     public void quitGame(){
