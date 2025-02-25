@@ -26461,7 +26461,7 @@ MonoBehaviour:
   radius: 1
   height: 0.01
   canMove: 1
-  maxSpeed: 3
+  maxSpeed: 5
   gravity: {x: 0, y: 0, z: 0}
   groundMask:
     serializedVersion: 2
@@ -27542,3 +27542,4 @@ SceneRoots:
   - {fileID: 1830138413}
   - {fileID: 2097376559}
   - {fileID: 2096155953}
+  - {fileID: 2000587085}
