@@ -302,9 +302,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64bf7ff313d5cd48b9174d5690ecf46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 6459405791118292979, guid: a0c434ba991d19b43b8460639d3f9d66, type: 3}
-  firePoint: {fileID: 2013029286}
-  projectileSpeed: 10
 --- !u!1 &209979125
 GameObject:
   m_ObjectHideFlags: 0
@@ -28306,7 +28303,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ea9568fc86e804e438101906cb07fe08, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
