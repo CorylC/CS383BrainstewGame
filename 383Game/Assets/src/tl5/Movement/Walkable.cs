@@ -12,12 +12,12 @@ public class Walkable : MonoBehaviour
 
     private Vector2 direction;
 
-    public void MoveTo (Vector2 direction) {
+    public void moveTo (Vector2 direction) {
         this.direction = direction;
     }
 
-    public void Stop() {
-        MoveTo(Vector2.zero);
+    public void stop() {
+        moveTo(Vector2.zero);
     }
 
     private void FixedUpdate() {
