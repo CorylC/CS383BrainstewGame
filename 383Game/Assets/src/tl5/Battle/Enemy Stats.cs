@@ -5,18 +5,19 @@ using UnityEngine.SceneManagement;
 public class EnemyStats : MonoBehaviour
 {
     public float health;
+    public float maxHealth;
     public int baseAttackDmg = 10;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        health = 10f;
+        health = maxHealth;
+        //update healthbar here
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        //enemy HUD updates here
     }
 
     public void TakeDamage(float damage)
