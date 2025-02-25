@@ -4,16 +4,20 @@ public class PauseManager : MonoBehaviour
 {
     public GameObject PauseMenu;
     public static bool isPaused; //make global variable so no other inputs during pause
-    void Start(){
+    void Start()
+    {
         PauseMenu.SetActive(false);
     }
 
 
-    void Update(){
+    void Update()
+    {
         if(Input.GetKeyDown(KeyCode.Escape)){
             if(isPaused){
                 resumeGame();
-            }else{
+            }
+            else
+            {
                 pauseGame();
             }
         }
@@ -32,12 +36,17 @@ public class PauseManager : MonoBehaviour
         isPaused = false;
     }
 
-    public void mainMenu(int sceneID){
+    public void mainMenu(){
         Time.timeScale = 1f;
-        SceneManager.LoadScene(sceneID);
+        SceneManager.LoadScene(0);
     }
 
     public void quitGame(){
-        Application.Quit();
+        Debug.Log("Quitting the game...");
+        Application.Quit(); //when game is built and for the quit button
+
+        #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+        #endif
     }
 }
