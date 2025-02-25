@@ -14,6 +14,12 @@ public class Move : MonoBehaviour
 
     private float _maxSpeedChange,_acceleration;
     private bool _onGround;
+
+    public float _KBForce;
+    public float _KBCounter;
+    public float _KBTotalTime;
+
+    public bool _HitFromRight;
     void Awake()
     {
         _body = GetComponent<Rigidbody2D>();
@@ -35,8 +41,26 @@ public class Move : MonoBehaviour
 
         _acceleration = _onGround ? _maxAcceleration : _maxAirAcceleration;
         _maxSpeedChange = _acceleration * Time.deltaTime;
-        _velocity.x = Mathf.MoveTowards(_velocity.x,_desiredVelocity.x,_maxSpeedChange);
 
+        _velocity.x = Mathf.MoveTowards(_velocity.x, _desiredVelocity.x, _maxSpeedChange);
+
+        if (_KBCounter <= 0)
+        {
         _body.linearVelocity = _velocity;
+        }
+        else
+        {
+            if (_HitFromRight)
+            {
+                _body.linearVelocity = new Vector2(-_KBForce*2, _KBForce);
+            }
+            else
+            {
+                _body.linearVelocity = new Vector2(_KBForce*2, _KBForce);
+            }
+
+            _KBCounter -= Time.deltaTime;
+        }
+
     }
 }
