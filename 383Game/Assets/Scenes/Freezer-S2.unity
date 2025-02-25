@@ -25165,6 +25165,10 @@ MonoBehaviour:
   _maxSpeed: 6
   _maxAcceleration: 35
   _maxAirAcceleration: 20
+  _KBForce: 0
+  _KBCounter: 0
+  _KBTotalTime: 0
+  _HitFromRight: 0
 --- !u!114 &1603883558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25687,6 +25691,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 1603883561}
   damage: 10
+  _movement: {fileID: 1603883557}
 --- !u!50 &1830138417
 Rigidbody2D:
   serializedVersion: 5
@@ -26229,6 +26234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 1603883561}
   damage: 10
+  _movement: {fileID: 1603883557}
 --- !u!114 &2083489862
 MonoBehaviour:
   m_ObjectHideFlags: 0
