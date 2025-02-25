@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 209979127}
   - component: {fileID: 209979126}
   m_Layer: 0
-  m_Name: Attention
+  m_Name: DiscoInferno
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
