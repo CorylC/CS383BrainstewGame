@@ -6,7 +6,9 @@ public class PauseManager : MonoBehaviour
     public static bool isPaused; //make global variable so no other inputs during pause
     void Start()
     {
+        isPaused = false;
         PauseMenu.SetActive(false);
+        Time.timeScale = 1f;
     }
 
 
@@ -24,6 +26,7 @@ public class PauseManager : MonoBehaviour
     }
 
     public void pauseGame(){
+        Debug.Log("pauseGame() triggered by: " + (new System.Diagnostics.StackTrace()).ToString());
         PauseMenu.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
