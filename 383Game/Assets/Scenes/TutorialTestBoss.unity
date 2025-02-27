@@ -990,7 +990,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 917247750}
   damage: 20
-  _movement: {fileID: 0}
+  _movement: {fileID: 917247753}
 --- !u!1 &610910812
 GameObject:
   m_ObjectHideFlags: 0
