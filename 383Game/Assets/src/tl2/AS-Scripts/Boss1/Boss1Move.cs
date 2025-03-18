@@ -7,7 +7,7 @@ public class Boss1Move : StateMachineBehaviour
     Rigidbody2D rb;
 
     public float speed = 2.0f;
-    public float atkRange = 5.0f;
+    public float atkRange = 8.0f;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex){
@@ -26,7 +26,9 @@ public class Boss1Move : StateMachineBehaviour
             rb.MovePosition(newPos);
 
         }
-        else{
+        else if (Vector2.Distance(player.position, rb.position) <= atkRange)
+        {
+
             animator.SetTrigger("Attack");
         }
     }
