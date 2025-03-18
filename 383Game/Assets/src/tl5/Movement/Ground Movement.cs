@@ -10,7 +10,7 @@ public class GroundMovement : MonoBehaviour
         var directionTowardsTarget = (target.position - this.transform.position).normalized;
         walkable.moveTo(directionTowardsTarget);
 
-        Debug.Log($"Target Position: {target.position}, Enemy Position: {transform.position}, Direction: {directionTowardsTarget}");
+        //Debug.Log($"Target Position: {target.position}, Enemy Position: {transform.position}, Direction: {directionTowardsTarget}");
     }
 }
 }

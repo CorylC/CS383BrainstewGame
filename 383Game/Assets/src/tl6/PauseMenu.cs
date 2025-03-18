@@ -52,4 +52,9 @@ public class PauseManager : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false;
         #endif
     }
+
+     public void SettingsMenu(){
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(6);
+}
 }
