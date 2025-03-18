@@ -27,7 +27,7 @@ public class Walkable : MonoBehaviour
 
         rigidbody.AddForce(moveForce);
 
-        Debug.Log($"Direction: {direction}, Velocity: {rigidbody.linearVelocity}");
+        //Debug.Log($"Direction: {direction}, Velocity: {rigidbody.linearVelocity}");
     }
 
 
