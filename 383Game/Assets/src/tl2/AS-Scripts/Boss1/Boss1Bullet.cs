@@ -9,12 +9,12 @@ public class Boss1Bullet : MonoBehaviour
     private Rigidbody2D rb;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-        Destroy(gameObject, lifeTime);
+    //void Start()
+    //{
+    //    rb = GetComponent<Rigidbody2D>();
+    //    Destroy(gameObject, lifeTime);
 
-    }
+    //}
 
     // Update is called once per frame
     private void Update()
