@@ -14,6 +14,10 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip[] soundlist;
     private static AudioManager instance;
     private AudioSource audioSource;
+    public static int AudioVolume = 1;
+
+    [Range(0.01f, 1f)]
+    [SerializeField] private float audioVolume = 1f;
 
     private void Awake()
     {
@@ -30,7 +34,7 @@ public class AudioManager : MonoBehaviour
         AudioClip soundNum;
         if (sound == SoundType.HURT)
         {
-            int rand = Random.Range(1, 3);
+            int rand = Random.Range(1, 4);
             Debug.Log("The random is: " + rand);
             soundNum = instance.soundlist[rand];
         }
@@ -38,6 +42,11 @@ public class AudioManager : MonoBehaviour
         {
             soundNum = instance.soundlist[(int)sound];
         }
-        instance.audioSource.PlayOneShot(soundNum, volume);
+        instance.audioSource.PlayOneShot(soundNum, volume * instance.audioVolume);
+    }
+
+    public void SetVolume(float volume)
+    {
+        audioVolume = Mathf.Clamp(volume, 0.01f, 1f);
     }
 }

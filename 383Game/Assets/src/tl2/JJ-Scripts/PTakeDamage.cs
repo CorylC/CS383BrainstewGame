@@ -20,7 +20,7 @@ public class EnemyCauseDamage : MonoBehaviour
             {
                 _movement._HitFromRight = false;
             }
-            AudioManager.playSound(SoundType.HURT, 1);
+            AudioManager.playSound(SoundType.HURT);
         }
     }
 }

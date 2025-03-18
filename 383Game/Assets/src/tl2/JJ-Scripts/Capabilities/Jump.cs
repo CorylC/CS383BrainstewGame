@@ -96,7 +96,7 @@ public class Jump : MonoBehaviour
             }
 
             _velocity.y += _jumpSpeed;
-            AudioManager.playSound(SoundType.JUMP, 1);
+            AudioManager.playSound(SoundType.JUMP);
         }
     }
 }
