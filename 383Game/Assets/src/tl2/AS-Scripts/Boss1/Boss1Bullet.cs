@@ -17,8 +17,13 @@ public class Boss1Bullet : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        rb.linearVelocity = transform.forward * speed;
+        transform.position += -transform.right * Time.deltaTime * speed;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(gameObject);
     }
 }
