@@ -690,6 +690,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundlist:
   - {fileID: 8300000, guid: f5e033873d01a7c4baf3064213733b84, type: 3}
+  - {fileID: 8300000, guid: 576fa8533b0140b4e94db0ca7c9b02c1, type: 3}
+  - {fileID: 8300000, guid: 0c256b867d4acb745846fe1e16927bb8, type: 3}
+  - {fileID: 8300000, guid: 1987b4c38bb654049b83b1a8f37bbf84, type: 3}
 --- !u!82 &308550036
 AudioSource:
   m_ObjectHideFlags: 0
