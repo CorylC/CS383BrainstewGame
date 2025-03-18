@@ -854,9 +854,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: e51db9d4364a04f4a87794e6000cb074, type: 3}
+      - m_Target: {fileID: 5455949941786129828}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: moveToScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
