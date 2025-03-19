@@ -810,6 +810,7 @@ GameObject:
   - component: {fileID: 608808535}
   - component: {fileID: 608808536}
   - component: {fileID: 608808537}
+  - component: {fileID: 608808538}
   m_Layer: 0
   m_Name: Boss1
   m_TagString: Enemy
@@ -1027,6 +1028,21 @@ MonoBehaviour:
   fireRate: 0.1
   Boss1Gun: {fileID: 1858858980}
   bulletPrefab: {fileID: 642627836708205525, guid: 2e0cc2b7f20497a4eb2982df686a6e55, type: 3}
+--- !u!114 &608808538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608808528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39b9b807a048d43d999cb988bcc457d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1000
+  maxHealth: 1000
+  baseAttackDmg: 10
 --- !u!1 &712118868
 GameObject:
   m_ObjectHideFlags: 0
