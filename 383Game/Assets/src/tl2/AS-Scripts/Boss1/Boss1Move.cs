@@ -5,30 +5,39 @@ public class Boss1Move : StateMachineBehaviour
 
     Transform player;
     Rigidbody2D rb;
+    Boss1 boss;
 
     public float speed = 2.0f;
-    public float atkRange = 8.0f;
+    public float atkRange = 15.0f;
+    public float maintainDist = 3f;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex){
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = animator.GetComponent<Rigidbody2D>();
+        boss = animator.GetComponent<Boss1>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex){
 
+        boss.facePlayer();
+
         Vector2 target = new Vector2(player.position.x, rb.position.y);
         Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
         
 
-        if(Vector2.Distance(player.position, rb.position) >= atkRange){
-            rb.MovePosition(newPos);
+        //if(Vector2.Distance(player.position, rb.position) >= maintainDist){
+        //    rb.MovePosition(newPos);
 
-        }
-        else if (Vector2.Distance(player.position, rb.position) <= atkRange)
-        {
+        //}
+        if (Vector2.Distance(player.position, rb.position) <= atkRange){
+            
+            if (Vector2.Distance(player.position, rb.position) >= maintainDist)
+            {
+                rb.MovePosition(newPos);
 
+            }
             animator.SetTrigger("Attack");
         }
     }
