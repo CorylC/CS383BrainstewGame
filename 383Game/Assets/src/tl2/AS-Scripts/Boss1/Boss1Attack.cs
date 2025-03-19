@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class Boss1Attack : MonoBehaviour
@@ -6,7 +7,7 @@ public class Boss1Attack : MonoBehaviour
     public int atkDmg = 25;
     public int atkDmg2 = 34;
 
-    public float fireRate = 15000f;
+    public float fireRate = 0.5f;
     private float timeToFire = 0f;
 
     private float timer;
@@ -37,7 +38,7 @@ public class Boss1Attack : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer > 0.5){
+        if (timer > fireRate){
 
             timer = 0;
             bossAtk1();

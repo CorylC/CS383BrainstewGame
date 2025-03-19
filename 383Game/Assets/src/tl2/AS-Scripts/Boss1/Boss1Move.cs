@@ -27,8 +27,7 @@ public class Boss1Move : StateMachineBehaviour
         Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
 
 
-        if (Vector2.Distance(player.position, rb.position) >= maintainDist)
-        {
+        if (Vector2.Distance(player.position, rb.position) >= maintainDist){
             rb.MovePosition(newPos);
 
         }
