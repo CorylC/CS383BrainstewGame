@@ -29864,7 +29864,11 @@ CanvasRenderer:
   m_GameObject: {fileID: 2130566204}
   m_CullTransparentMesh: 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!1001 &1966134373669556040
+=======
+--- !u!1001 &3032423233357647582
+>>>>>>> Stashed changes
 =======
 --- !u!1001 &3032423233357647582
 >>>>>>> Stashed changes
@@ -29873,6 +29877,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     m_TransformParent: {fileID: 922341264}
     m_Modifications:
@@ -29933,6 +29938,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1603883561}
 =======
+=======
+>>>>>>> Stashed changes
     m_TransformParent: {fileID: 406088360}
     m_Modifications:
     - target: {fileID: 3023941019974095816, guid: 433606a584312d44f8759c4fd36d6e42, type: 3}
@@ -29987,14 +29994,22 @@ PrefabInstance:
       propertyPath: damageInterval
       value: 1
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_SourcePrefab: {fileID: 100100000, guid: f49810e7dcdd545528ed6830381860a9, type: 3}
 --- !u!1001 &7969477473876181975
+=======
+  m_SourcePrefab: {fileID: 100100000, guid: 433606a584312d44f8759c4fd36d6e42, type: 3}
+--- !u!1001 &6667616981134073773
+>>>>>>> Stashed changes
 =======
   m_SourcePrefab: {fileID: 100100000, guid: 433606a584312d44f8759c4fd36d6e42, type: 3}
 --- !u!1001 &6667616981134073773
@@ -30004,6 +30019,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     m_TransformParent: {fileID: 922341264}
     m_Modifications:
@@ -30063,6 +30079,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrackingEnemies
 =======
+=======
+>>>>>>> Stashed changes
     m_TransformParent: {fileID: 406088360}
     m_Modifications:
     - target: {fileID: 8244238496018719852, guid: 967387bcd30110747a022f2799627a91, type: 3}
@@ -30108,6 +30126,9 @@ PrefabInstance:
     - target: {fileID: 8958600449681671741, guid: 967387bcd30110747a022f2799627a91, type: 3}
       propertyPath: m_Name
       value: MovingPlatform
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -30115,7 +30136,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_SourcePrefab: {fileID: 100100000, guid: 3b351a3b94ec5451a88e111e1b9ffcbb, type: 3}
+=======
+  m_SourcePrefab: {fileID: 100100000, guid: 967387bcd30110747a022f2799627a91, type: 3}
+>>>>>>> Stashed changes
 =======
   m_SourcePrefab: {fileID: 100100000, guid: 967387bcd30110747a022f2799627a91, type: 3}
 >>>>>>> Stashed changes
