@@ -1,0 +1,35 @@
+using System.Collections;
+using NUnit.Framework;
+using UnityEngine;
+using UnityEngine.TestTools;
+using UnityEngine.SceneManagement;
+
+public class Boss1HealthTest2
+{
+    [OneTimeSetUp]
+    public void LoadScene()
+    {
+        SceneManager.LoadScene("BossLevel1");
+    }
+
+    // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
+    // `yield return null;` to skip a frame.
+    [UnityTest]
+    public IEnumerator boss1Test2()
+    {
+        // Use the Assert class to test conditions.
+        // Use yield to skip a frame.
+
+        var boss1Obj = GameObject.FindObjectOfType<EnemyStats>();
+        Assert.NotNull(boss1Obj, "Boss1 is missing");
+
+        boss1Obj.health += 10;
+
+        boss1Obj.TakeDamage(10);
+        yield return null;
+        Assert.AreEqual(500, boss1Obj.health, $"Boss Health: {boss1Obj.health}");
+        yield return null;
+
+        
+    }
+}
