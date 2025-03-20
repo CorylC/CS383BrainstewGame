@@ -1,0 +1,6 @@
+{
+    "name": "Boundary_edge1",
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ]
+}
