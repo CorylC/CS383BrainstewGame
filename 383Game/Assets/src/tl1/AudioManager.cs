@@ -15,7 +15,7 @@ public class AudioManager : MonoBehaviour
 {
     //calls soundlist from scene
     [SerializeField] private AudioClip[] soundlist;
-    private static AudioManager instance;
+    public static AudioManager instance;
     private AudioSource audioSource;
     public static int AudioVolume = 1;
 
@@ -40,10 +40,11 @@ public class AudioManager : MonoBehaviour
     //function to call if you want to play a sound
     //  SoundType sound is the enum of available sounds, you can call HURT to play hurt sounds or JUMP for jump sounds
     //  volume is set to 1 as a base so you do not need to add unless you want it to be more quiet
-    public static void playSound(SoundType sound, float volume = 1)
+    public static void playSound(SoundType sound, float VOLUME = 1)
     {
         AudioClip soundNum;
         int rand;
+        float volume = Mathf.Clamp(VOLUME, 0.01f, 1f);
         //maybe look for better ways?? Very not scalable way of introducing multiple audio samples per audio option
         switch (sound)
         {

@@ -956,7 +956,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.51, y: -3.19, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1858858980}
@@ -1027,7 +1027,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   atkDmg: 25
   atkDmg2: 34
-  fireRate: 0.1
+  fireRate: 0.5
   Boss1Gun: {fileID: 1858858980}
   bulletPrefab: {fileID: 642627836708205525, guid: 2e0cc2b7f20497a4eb2982df686a6e55, type: 3}
 --- !u!114 &608808538
@@ -1042,8 +1042,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39b9b807a048d43d999cb988bcc457d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1000
-  maxHealth: 1000
+  health: 500
+  maxHealth: 500
   baseAttackDmg: 10
 --- !u!1 &712118868
 GameObject:
