@@ -7,10 +7,15 @@ public class EnemyShooter : MonoBehaviour
     public Transform bulletPos;
     private float timer;
     private GameObject player;
+    private CannonShootDynamicBindingBC cannon; 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+
+        cannon = new CannonShootDynamicBinding();  // instantiate it
+        cannon.setSpeed(15);
+        Debug.Log("Cannon speed is: " + cannon.getSpeed());
     }
 
     // Update is called once per frame
@@ -32,7 +37,11 @@ public class EnemyShooter : MonoBehaviour
 
     void shoot(){
         Instantiate(bullet, bulletPos.position, Quaternion.identity);
+        Debug.Log("Bullet shot at speed: " + cannon.getSpeed());
     }
 
     
 }
+
+
+

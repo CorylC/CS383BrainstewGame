@@ -6,12 +6,11 @@ using UnityEngine.TestTools;
 
 public class DroneStressTest
 {
-    
     private GameObject dronePrefab;
     private GameObject player;
     private const string prefabPath = "TrackingEnemies";
     private const int maxDrones = 500;
-
+    private const float minPlayableFPS = 19f; // FPS cutoff threshold
 
     [UnitySetUp]
     public IEnumerator SetUp()
@@ -34,43 +33,53 @@ public class DroneStressTest
         string errorMessage = "Error";
         int batchSize = 100;
 
-         while (!testFailed)
-    {
-        // Instantiate drones in batches
-        for (int i = 0; i < batchSize; i++)
+        while (!testFailed)
         {
-            try
+            // Instantiate drones in batches
+            for (int i = 0; i < batchSize; i++)
             {
-                Object.Instantiate(dronePrefab, Vector3.zero, Quaternion.identity);
-                count++;
+                try
+                {
+                    Object.Instantiate(dronePrefab, Vector3.zero, Quaternion.identity);
+                    count++;
+                }
+                catch (System.Exception e)
+                {
+                    testFailed = true;
+                    errorMessage = $"Stress test failed after spawning {count} drones. Exception: {e.Message}";
+                    break;
+                }
             }
-            catch (System.Exception e)
+
+            yield return null; // Allow Unity to update and process other things
+
+            // Calculate FPS
+            float currentFPS = 1f / Time.deltaTime;
+
+            // If FPS drops below the threshold, stop the test
+            if (currentFPS < minPlayableFPS)
             {
                 testFailed = true;
-                errorMessage = $"Stress test failed after spawning {count} drones. Exception: {e.Message}";
+                errorMessage = $"Stress test failed due to low FPS ({currentFPS:F2}). Instantiated {count} drones.";
                 break;
             }
+
+            // Log progress
+            Debug.Log($"Successfully instantiated {count} drones. Current FPS: {currentFPS:F2}");
+
+            // If you reach the maximum drones, stop the test
+            if (count >= 100000)
+                break;
         }
 
-
-        yield return null; // Allow Unity to update and process other things
-
-        // Log progress
-        Debug.Log($"Successfully instantiated {count} drones in total.");
-
-        // If you reach the maximum drones, stop the test
-        if (count >= 100000)
-            break;
-    }
-
-    if (testFailed)
-    {
-        Assert.Fail(errorMessage);
-    }
-    else
-    {
-        Debug.Log($"Stress test completed: Successfully instantiated {count} drones without crashing.");
-        Assert.Pass();
-    }
+        if (testFailed)
+        {
+            Assert.Fail(errorMessage);
+        }
+        else
+        {
+            Debug.Log($"Stress test completed: Successfully instantiated {count} drones without crashing.");
+            Assert.Pass();
+        }
     }
 }
