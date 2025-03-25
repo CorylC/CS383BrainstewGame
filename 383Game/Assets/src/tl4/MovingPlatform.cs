@@ -4,13 +4,15 @@ public class MovingPlatform : MonoBehaviour
 {
 
     public Transform posA, posB;
-    public float speed;
+    private MovingPlatformDynamicBindingBC speed;
     Vector2 targetPos;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        speed = new MovingPlatformDynamicBinding();
+        speed.setSpeed(5f);
         targetPos = posB.position;
     }
 
@@ -21,7 +23,7 @@ public class MovingPlatform : MonoBehaviour
 
         if(Vector2.Distance(transform.position, posA.position) < 0.1f) targetPos = posB.position;
 
-        transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, targetPos, speed.getSpeed() * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
