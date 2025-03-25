@@ -5,7 +5,6 @@ public class TrapDamage : MonoBehaviour
 {
     [SerializeField] private float damage;
     [SerializeField] private float damageInterval;
-    public float DamageInterval => damageInterval;
 
     private Coroutine damageCoroutine;
 
