@@ -14,6 +14,7 @@ public enum SoundType
 public class AudioManager : MonoBehaviour
 {
     //calls soundlist from scene
+    public DynamicAudioManagerVolume audioVolume;
     [SerializeField] private AudioClip[] soundlist;
     public static AudioManager instance;
     private AudioSource audioSource;
@@ -21,7 +22,7 @@ public class AudioManager : MonoBehaviour
 
     //multiplier from audioSlider
     [Range(0.01f, 1f)]
-    [SerializeField] private float audioVolume = 1f;
+    //[SerializeField] private float audioVolume = 1f;
 
     //quick list of ranges, maybe find better way to do this
     private int[] soundlistRanges = {0, 1, 4};
@@ -34,7 +35,12 @@ public class AudioManager : MonoBehaviour
     //gets audio sources on startup
     private void Start()
     {
+        if (audioVolume == null)
+        {
+            audioVolume = new DynamicAudioManagerVolume();
+        }
         audioSource = GetComponent<AudioSource>();
+        instance.audioVolume.setVolume(1f);
     }
 
     //function to call if you want to play a sound
@@ -71,12 +77,14 @@ public class AudioManager : MonoBehaviour
         {
             soundNum = instance.soundlist[(int)sound];
         }
-        **/
-        instance.audioSource.PlayOneShot(soundNum, volume * instance.audioVolume);
+        */
+        instance.audioSource.PlayOneShot(soundNum, volume * instance.audioVolume.getVolume());
     }
 
+    /**
     public void SetVolume(float volume)
     {
         audioVolume = Mathf.Clamp(volume, 0.01f, 1f);
     }
+    */
 }
