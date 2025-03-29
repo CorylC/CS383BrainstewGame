@@ -688,7 +688,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 576fa8533b0140b4e94db0ca7c9b02c1, type: 3}
   - {fileID: 8300000, guid: 0c256b867d4acb745846fe1e16927bb8, type: 3}
   - {fileID: 8300000, guid: 1987b4c38bb654049b83b1a8f37bbf84, type: 3}
-  audioVolume: 1
 --- !u!82 &308550036
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1068,7 +1067,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1600, y: 900}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
