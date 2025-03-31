@@ -35,7 +35,9 @@ public class EnemyShooter : MonoBehaviour
         
     }
 
-    void shoot(){
+    void shoot()
+    {
+        AudioManager.playSound(SoundType.CANNONSHOOT);
         Instantiate(bullet, bulletPos.position, Quaternion.identity);
         Debug.Log("Bullet shot at speed: " + cannon.getSpeed());
     }
