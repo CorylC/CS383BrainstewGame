@@ -20,6 +20,7 @@ public class Boss1Attack : MonoBehaviour
         //if(timeToFire <= 0f){
             //Debug.Log("Boss Firing");
             Instantiate(bulletPrefab, Boss1Gun.position, Boss1Gun.rotation);
+            AudioManager.playSound(SoundType.CANNONSHOOT);
             //timeToFire = fireRate;
         //}else{
         //    timeToFire -= Time.deltaTime;

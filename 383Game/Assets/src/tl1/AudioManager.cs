@@ -7,7 +7,9 @@ using System.Collections.Generic;
 public enum SoundType
 {
     JUMP,
-    HURT
+    HURT,
+    SHOOT,
+    CANNONSHOOT
 }
 
 [RequireComponent(typeof(AudioSource))]
@@ -25,7 +27,7 @@ public class AudioManager : MonoBehaviour
     //[SerializeField] private float audioVolume = 1f;
 
     //quick list of ranges, maybe find better way to do this
-    private int[] soundlistRanges = {0, 1, 4};
+    private int[] soundlistRanges = {0, 1, 4, 5};
 
     private void Awake()
     {
@@ -60,6 +62,14 @@ public class AudioManager : MonoBehaviour
                 break;
             case SoundType.HURT:
                 rand = Random.Range(instance.soundlistRanges[1], instance.soundlistRanges[2]);
+                soundNum = instance.soundlist[rand];
+                break;
+            case SoundType.SHOOT:
+                rand = 4;
+                soundNum = instance.soundlist[rand];
+                break;
+            case SoundType.CANNONSHOOT:
+                rand = 5;
                 soundNum = instance.soundlist[rand];
                 break;
             default:

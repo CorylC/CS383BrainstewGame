@@ -41,6 +41,7 @@ public class Shooting : MonoBehaviour
         {
             canFire = false;
             Instantiate(bullet, bulletTransform.position, Quaternion.identity);
+            AudioManager.playSound(SoundType.SHOOT);
         }
     }
 }

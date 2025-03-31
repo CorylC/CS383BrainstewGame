@@ -7,7 +7,7 @@ public class AudioManagerVolume
 
     public virtual float getVolume()
     {
-        return 1;
+        return 1f;
     }
 
     public virtual void setVolume(float VOLUME)
