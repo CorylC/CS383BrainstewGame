@@ -9,6 +9,8 @@ public class Boss1Bullet : MonoBehaviour
     public GameObject playerPos;
     private Rigidbody2D rb;
 
+    public float boss1AtkDamage = 10;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,8 +28,21 @@ public class Boss1Bullet : MonoBehaviour
         //transform.position += -transform.right * Time.deltaTime * speed;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
+    void OnCollisionEnter2D(Collision2D collision){
+
+        //if collision with object that has "Player" tag, player takes damage
+        //modified from shooting.cs for boss
+        if (collision.transform.tag == "Player"){
+
+            //Retrieve PlayerStats script for player.TakeDamage
+            PlayerStats player = collision.transform.GetComponent<PlayerStats>();  
+
+            if (player != null){
+                player.TakeDamage(boss1AtkDamage);
+            }
+        }
+
+        //on collision with anything, the bullet destroys itself
         Destroy(gameObject);
     }
 }
