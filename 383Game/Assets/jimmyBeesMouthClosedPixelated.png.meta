@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      jimmyBeesMouthClosedPixelated_0: -9033352786892941017
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      jimmyBeesMouthOpen3Pixelated_0: 4572367640320463008
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
