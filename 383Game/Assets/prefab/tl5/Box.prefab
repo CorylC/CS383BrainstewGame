@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 0}
-  damage: 5
+  damage: 10
   _movement: {fileID: 0}
 --- !u!114 &7602952726585326600
 MonoBehaviour:
