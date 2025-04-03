@@ -1034,7 +1034,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 524170579}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trackers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1145,7 +1145,7 @@ GameObject:
   - component: {fileID: 667691328}
   - component: {fileID: 667691327}
   - component: {fileID: 667691326}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cannon
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -1474,7 +1474,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 794690327}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Patrollers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1494,6 +1494,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1054646347}
+  - {fileID: 1704099590}
   - {fileID: 1111713200}
   m_Father: {fileID: 1526919476}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1648,7 +1650,7 @@ GameObject:
   - component: {fileID: 992577432}
   - component: {fileID: 992577431}
   - component: {fileID: 992577430}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GroundEnemy2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -1973,7 +1975,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1054646347}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PointA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1988,12 +1990,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1054646346}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.71, y: -0.26, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.64, y: -3.18, z: 0.1017664}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1111713200}
+  m_Father: {fileID: 794690327}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1054876645
 PrefabInstance:
@@ -2067,9 +2069,17 @@ PrefabInstance:
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 2139020733}
+    - target: {fileID: 4080811301891216190, guid: 3b351a3b94ec5451a88e111e1b9ffcbb, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7146445617798509898, guid: 3b351a3b94ec5451a88e111e1b9ffcbb, type: 3}
       propertyPath: m_Name
       value: TrackingEnemies
+      objectReference: {fileID: 0}
+    - target: {fileID: 7146445617798509898, guid: 3b351a3b94ec5451a88e111e1b9ffcbb, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7146445617798509898, guid: 3b351a3b94ec5451a88e111e1b9ffcbb, type: 3}
       propertyPath: m_IsActive
@@ -2179,13 +2189,15 @@ GameObject:
   - component: {fileID: 1111713205}
   - component: {fileID: 1111713204}
   - component: {fileID: 1111713203}
-  m_Layer: 0
-  m_Name: GroundEnemyPatrolPreLever
-  m_TagString: Untagged
+  - component: {fileID: 1111713207}
+  - component: {fileID: 1111713206}
+  m_Layer: 7
+  m_Name: GroundPatrol
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1111713200
 Transform:
   m_ObjectHideFlags: 0
@@ -2198,9 +2210,7 @@ Transform:
   m_LocalPosition: {x: 9.66, y: -2.98, z: 0.1017664}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1054646347}
-  - {fileID: 1704099590}
+  m_Children: []
   m_Father: {fileID: 794690327}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1111713201
@@ -2364,10 +2374,40 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_CollisionDetection: 1
+  m_Constraints: 6
+--- !u!114 &1111713206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111713199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10fb677b5f517cd4bb2871ae5c5f51dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 2139020733}
+  damage: 5
+  _movement: {fileID: 2139020736}
+--- !u!114 &1111713207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111713199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39b9b807a048d43d999cb988bcc457d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 30
+  maxHealth: 30
+  baseAttackDmg: 10
 --- !u!1001 &1178664641
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2444,7 +2484,7 @@ GameObject:
   - component: {fileID: 1233778167}
   - component: {fileID: 1233778166}
   - component: {fileID: 1233778165}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cannon 2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -2990,7 +3030,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1283656840}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BulletPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3337,7 +3377,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1477476322}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BulletPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3678,7 +3718,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1704099590}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PointB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3693,12 +3733,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1704099589}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.87, y: -0.26, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 18.9, y: -3.39, z: 0.1017664}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1111713200}
+  m_Father: {fileID: 794690327}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1708896960
 GameObject:
@@ -3926,7 +3966,7 @@ GameObject:
   - component: {fileID: 1855718150}
   - component: {fileID: 1855718149}
   - component: {fileID: 1855718148}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GroundEnemy3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -4597,6 +4637,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box
       objectReference: {fileID: 0}
+    - target: {fileID: 3761584335467878439, guid: 6bfc8e08cb005499597344e67036aa2d, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6585864603742247101, guid: 6bfc8e08cb005499597344e67036aa2d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -73.812805
@@ -5051,9 +5095,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 3611899318719211820, guid: f49810e7dcdd545528ed6830381860a9, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3850072285542119713, guid: f49810e7dcdd545528ed6830381860a9, type: 3}
       propertyPath: m_Name
       value: GroundEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3850072285542119713, guid: f49810e7dcdd545528ed6830381860a9, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3850072285542119713, guid: f49810e7dcdd545528ed6830381860a9, type: 3}
       propertyPath: m_IsActive
