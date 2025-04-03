@@ -39,6 +39,6 @@ public class BCModeToggle : MonoBehaviour
     {
         PlayerPrefs.SetInt("BCMode", isOn ? 1 : 0);
         PlayerPrefs.Save();
-        Debug.Log("BC Mode changed to: " + isOn);
+        Debug.Log("BC Mode changed to: " + (isOn? "True": "False"));
     }
 }

@@ -41,13 +41,17 @@ public class PlayerStats : MonoBehaviour
     //enemies will ref this class and function so player can take dmg from contact hits or projectiles
     public void TakeDamage(float damage)
     {
-        health -= damage;
-        UpdateHealthBar();
-
-        if(health <= 0)
+        bool bcMode = PlayerPrefs.GetInt("BCMode",0) == 1;
+        if(!bcMode)
         {
-            Die();
-        }
+            health -= damage; //need null check
+            UpdateHealthBar();
+
+            if(health <= 0)
+            {
+                Die();
+            }
+        }    
     }
 
     public void Heal(float amount)

@@ -10,7 +10,6 @@ public class EnemyCauseDamage : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            playerHealth.TakeDamage(damage);
             _movement._KBCounter = _movement._KBTotalTime;
             if (collision.transform.position.x <= transform.position.x)
             {
@@ -20,7 +19,14 @@ public class EnemyCauseDamage : MonoBehaviour
             {
                 _movement._HitFromRight = false;
             }
-            AudioManager.playSound(SoundType.HURT);
+            
+
+            bool bcMode = PlayerPrefs.GetInt("BCMode",0) == 1;
+            if(!bcMode)
+            {
+                AudioManager.playSound(SoundType.HURT);
+                playerHealth.TakeDamage(damage);
+            }
         }
     }
 }
