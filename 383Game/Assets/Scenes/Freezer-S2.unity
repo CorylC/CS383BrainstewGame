@@ -2740,8 +2740,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39b9b807a048d43d999cb988bcc457d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  maxHealth: 0
+  health: 1000
+  maxHealth: 1000
   baseAttackDmg: 10
 --- !u!1 &1317590851
 GameObject:
@@ -29510,12 +29510,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1208403132}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10fb677b5f517cd4bb2871ae5c5f51dc, type: 3}
+  m_Script: {fileID: 11500000, guid: 39b9b807a048d43d999cb988bcc457d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 1603883561}
-  damage: 5
-  _movement: {fileID: 1603883557}
+  health: 100
+  maxHealth: 100
+  baseAttackDmg: 10
 --- !u!114 &1830138415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29525,12 +29525,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1208403132}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39b9b807a048d43d999cb988bcc457d3, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b3f54f14b2794166ae81ebf2c5b8129, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  maxHealth: 100
-  baseAttackDmg: 10
+  enemyHealth: {fileID: 0}
+  damage: 10
 --- !u!1 &1858841102
 GameObject:
   m_ObjectHideFlags: 0
@@ -30236,7 +30235,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1046815619998054185, guid: 3b351a3b94ec5451a88e111e1b9ffcbb, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1170117590871360892, guid: 3b351a3b94ec5451a88e111e1b9ffcbb, type: 3}
       propertyPath: target
@@ -30298,16 +30297,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 407036877671059977, guid: 3b351a3b94ec5451a88e111e1b9ffcbb, type: 3}
+    - {fileID: 1046815619998054185, guid: 3b351a3b94ec5451a88e111e1b9ffcbb, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7146445617798509898, guid: 3b351a3b94ec5451a88e111e1b9ffcbb, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1830138415}
+      addedObject: {fileID: 1830138414}
     - targetCorrespondingSourceObject: {fileID: 7146445617798509898, guid: 3b351a3b94ec5451a88e111e1b9ffcbb, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1830138414}
+      addedObject: {fileID: 1830138415}
   m_SourcePrefab: {fileID: 100100000, guid: 3b351a3b94ec5451a88e111e1b9ffcbb, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
