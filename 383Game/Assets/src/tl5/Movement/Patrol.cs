@@ -2,60 +2,54 @@ using UnityEngine;
 
 public class Patrol : MonoBehaviour
 {
-    [SerializeField] Transform[] targetPoints;
-    [SerializeField] int currentPoint;
-    [SerializeField] float moveSpeed;
+    public GameObject PointA;
+    public GameObject PointB;
+    private Rigidbody2D rb;
+    private Animator anim;
+    private Transform currentPoint;
+    public float speed;
+    private bool facingRight = true;
 
-    [Space]
-    [Header("Timers")]
-    [SerializeField] float maxWaitTime;
-    [SerializeField] float minWaitTime;
-
-    private float waitTime;
-    private float waitTimeCounter;
-
-    // Start is called before the first frame update
+    
     void Start()
     {
-        currentPoint = Random.Range(0, targetPoints.Length);
-
-        waitTimeCounter = SetWaitTime();
+        rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+        currentPoint = PointA.transform;
+        anim.SetBool("isRunning", true);
+        
     }
 
-    // Update is called once per frame
     void Update()
-{
-    Vector2 targetPosition = new Vector2(targetPoints[currentPoint].position.x, transform.position.y);
-
-    if (Vector2.Distance(transform.position, targetPosition) < 0.1f)
     {
-        if (waitTimeCounter <= 0)
-        {
-            IncreaseCurrentPoint();
-            waitTimeCounter = SetWaitTime();
+        Vector2 point = currentPoint.position - transform.position;
+        if(currentPoint == PointB.transform){
+            rb.linearVelocity = new Vector2(speed, 0);
+             if (!facingRight) Flip();
         }
         else
         {
-            waitTimeCounter -= Time.deltaTime;
+            rb.linearVelocity = new Vector2(-speed, 0);
+             if (facingRight) Flip();
         }
-    }
 
-    transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
-}
-
-    private void IncreaseCurrentPoint()
-    {
-        currentPoint++;
-        if(currentPoint >= targetPoints.Length)
+        if(Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == PointB.transform)
         {
-            currentPoint = 0;
+            currentPoint = PointA.transform;
         }
+        if(Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == PointA.transform)
+        {
+            currentPoint = PointB.transform;
+        }
+
+        
     }
 
-    private float SetWaitTime()
+    void Flip()
     {
-        waitTime = Random.Range(minWaitTime, maxWaitTime);
-
-        return waitTime;
+        facingRight = !facingRight;
+        Vector3 scale = transform.localScale;
+        scale.x *= -1; // Invert X scale
+        transform.localScale = scale;
     }
 }
