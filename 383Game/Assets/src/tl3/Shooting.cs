@@ -19,6 +19,11 @@ public class Shooting : MonoBehaviour
 
     void Update()
     {
+        if(PauseManager.isPaused) //prevent shooting during pause
+        {
+            return;
+            //exit early if the game is paused (this way player cannot shoot when paused)
+        }
         mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
 
         Vector3 rotation = (mousePos - transform.position);
