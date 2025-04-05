@@ -1,12 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using MyGame.UI;
 
 public class EnemyStats : MonoBehaviour
 {
     public float health;
     public float maxHealth;
     public int baseAttackDmg = 10;
+   
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
