@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using MyGame.UI;
+
 
 public class EnemyStats : MonoBehaviour
 {
