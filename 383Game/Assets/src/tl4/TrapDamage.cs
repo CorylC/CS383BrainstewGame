@@ -13,12 +13,12 @@ public class TrapDamage : MonoBehaviour
     private Rigidbody2D targetRB;
     private bool playerInTrap = false;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            PlayerStats playerStats = collision.GetComponent<PlayerStats>();
-            targetRB = collision.GetComponent<Rigidbody2D>();
+            PlayerStats playerStats = other.GetComponent<PlayerStats>();
+            targetRB = other.GetComponent<Rigidbody2D>();
             //Rigidbody2D rb = collision.GetComponent<Rigidbody2D>();
             if(playerStats != null && targetRB != null)
             {
@@ -44,9 +44,9 @@ public class TrapDamage : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D other)
     {
-        if (collision.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             playerInTrap = false;
 
