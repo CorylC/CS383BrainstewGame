@@ -4,38 +4,42 @@ using System.Collections;
 
 public class EnemyHealthBar : MonoBehaviour
 {
-    // Reference to the green health bar slider (current health)
     [SerializeField] private Slider healthSlider;
-
-    // Reference to the red background slider (delayed effect)
     [SerializeField] private Slider backgroundSlider;
-
-    // Reference to the EnemyStats script to get health data
     private EnemyStats enemyStats;
 
     void Start()
     {
-        // Get the EnemyStats component attached to this enemy
         enemyStats = GetComponent<EnemyStats>();
 
-        // If the health slider is not assigned in the Inspector, try to find it in the enemy's children
+        // Dynamically find the health slider if not assigned
         if (healthSlider == null)
         {
-            Transform healthBarTransform = transform.Find("EnemyHealthbars/healthSlider"); // Locating the health slider in the enemy canvas
+            Transform healthBarTransform = transform.Find("EnemyHealthbars/healthSlider");
             if (healthBarTransform != null)
+            {
                 healthSlider = healthBarTransform.GetComponent<Slider>();
+                Debug.Log("HealthSlider assigned successfully.");
+            }
             else
+            {
                 Debug.LogError("HealthSlider not found! Make sure the path is correct.");
+            }
         }
 
-        // If the background slider is not assigned, try to find it
+        // Dynamically find the background slider if not assigned
         if (backgroundSlider == null)
         {
-            Transform backgroundBarTransform = transform.Find("EnemyHealthbars/backgroundSlider"); // Locating the background slider in the enemy canvas
+            Transform backgroundBarTransform = transform.Find("EnemyHealthbars/backgroundSlider");
             if (backgroundBarTransform != null)
+            {
                 backgroundSlider = backgroundBarTransform.GetComponent<Slider>();
+                Debug.Log("BackgroundSlider assigned successfully.");
+            }
             else
+            {
                 Debug.LogError("BackgroundSlider not found! Make sure the path is correct.");
+            }
         }
 
         // Check if sliders are successfully assigned
@@ -90,7 +94,6 @@ public class EnemyHealthBar : MonoBehaviour
         }
     }
 }
-
 
 
 
