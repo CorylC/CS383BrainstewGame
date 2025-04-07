@@ -1700,6 +1700,7 @@ GameObject:
   - component: {fileID: 749943841}
   - component: {fileID: 749943840}
   - component: {fileID: 749943844}
+  - component: {fileID: 749943845}
   m_Layer: 0
   m_Name: Lever
   m_TagString: Untagged
@@ -1737,11 +1738,11 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.00813514, y: -2.323875}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1751,7 +1752,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3.6, y: 5.12}
+  m_Size: {x: 3.5837297, y: 0.47235012}
   m_EdgeRadius: 0
 --- !u!50 &749943841
 Rigidbody2D:
@@ -1857,7 +1858,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 749943839}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd3a8d601a6674c6cb33d0f013ea2c18, type: 3}
   m_Name: 
@@ -1878,6 +1879,18 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _collideTag: Player
+--- !u!114 &749943845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749943839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b61198a15a36b1a41a60dc65529d0c49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &794497004
 GameObject:
   m_ObjectHideFlags: 0
@@ -28936,6 +28949,7 @@ GameObject:
   - component: {fileID: 1603883560}
   - component: {fileID: 1603883556}
   - component: {fileID: 1603883561}
+  - component: {fileID: 1603883562}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -29207,6 +29221,18 @@ MonoBehaviour:
   maxHealth: 100
   baseAttackDmg: 10
   healthBar: {fileID: 2051528928}
+--- !u!114 &1603883562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603883549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7674f7636593e8542877ab686d2c30b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1620781059
 GameObject:
   m_ObjectHideFlags: 0
