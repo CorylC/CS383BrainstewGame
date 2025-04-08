@@ -12,6 +12,7 @@ public class EnemyHealthBar : MonoBehaviour
     {
         enemyStats = GetComponent<EnemyStats>();
 
+<<<<<<< Updated upstream
         // Find the healthSlider and backgroundSlider within the child prefab
         Transform healthSliderTransform = transform.Find("EnemyHealthBars/EnemyHealthbar/healthSlider");
         if (healthSliderTransform != null)
@@ -33,6 +34,42 @@ public class EnemyHealthBar : MonoBehaviour
             Debug.LogError("backgroundSlider not found. Check prefab hierarchy.");
         }
 
+=======
+        // These paths are now relative to this GameObject
+        if (healthSlider == null)
+        {
+            Transform healthBarTransform = transform.Find("EnemyHealthbar/healthSlider");
+            if (healthBarTransform != null)
+            {
+                healthSlider = healthBarTransform.GetComponent<Slider>();
+                Debug.Log("HealthSlider assigned successfully.");
+            }
+            else
+            {
+                Debug.LogError("HealthSlider not found! Check prefab structure.");
+            }
+        }
+
+        if (backgroundSlider == null)
+        {
+            Transform backgroundBarTransform = transform.Find("EnemyHealthbar/backgroundSlider");
+            if (backgroundBarTransform != null)
+            {
+                backgroundSlider = backgroundBarTransform.GetComponent<Slider>();
+                Debug.Log("BackgroundSlider assigned successfully.");
+            }
+            else
+            {
+                Debug.LogError("BackgroundSlider not found! Check prefab structure.");
+            }
+        }
+
+        if (healthSlider == null || backgroundSlider == null)
+        {
+            Debug.LogError("Sliders not assigned properly.");
+        }
+
+>>>>>>> Stashed changes
         UpdateHealthBar();
     }
 
@@ -43,7 +80,11 @@ public class EnemyHealthBar : MonoBehaviour
 
     private void UpdateHealthBar()
     {
+<<<<<<< Updated upstream
         if (enemyStats != null && healthSlider != null && backgroundSlider != null)
+=======
+        if (enemyStats != null)
+>>>>>>> Stashed changes
         {
             float healthPercentage = enemyStats.health / enemyStats.maxHealth;
             healthSlider.value = healthPercentage;
@@ -67,6 +108,9 @@ public class EnemyHealthBar : MonoBehaviour
     }
 }
 
+<<<<<<< Updated upstream
 
 
 
+=======
+>>>>>>> Stashed changes
