@@ -12,7 +12,6 @@ public class EnemyHealthBar : MonoBehaviour
     {
         enemyStats = GetComponent<EnemyStats>();
 
-<<<<<<< Updated upstream
         // Find the healthSlider and backgroundSlider within the child prefab
         Transform healthSliderTransform = transform.Find("EnemyHealthBars/EnemyHealthbar/healthSlider");
         if (healthSliderTransform != null)
@@ -34,7 +33,6 @@ public class EnemyHealthBar : MonoBehaviour
             Debug.LogError("backgroundSlider not found. Check prefab hierarchy.");
         }
 
-=======
         // These paths are now relative to this GameObject
         if (healthSlider == null)
         {
@@ -69,7 +67,6 @@ public class EnemyHealthBar : MonoBehaviour
             Debug.LogError("Sliders not assigned properly.");
         }
 
->>>>>>> Stashed changes
         UpdateHealthBar();
     }
 
@@ -80,11 +77,8 @@ public class EnemyHealthBar : MonoBehaviour
 
     private void UpdateHealthBar()
     {
-<<<<<<< Updated upstream
         if (enemyStats != null && healthSlider != null && backgroundSlider != null)
-=======
         if (enemyStats != null)
->>>>>>> Stashed changes
         {
             float healthPercentage = enemyStats.health / enemyStats.maxHealth;
             healthSlider.value = healthPercentage;
@@ -108,9 +102,6 @@ public class EnemyHealthBar : MonoBehaviour
     }
 }
 
-<<<<<<< Updated upstream
 
 
 
-=======
->>>>>>> Stashed changes
