@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class MovingPlatformDynamicBindingBC
 {
-    public virtual float getSpeed()
+    public float getSpeed()
     {
         return 4;
     }
 
-    public virtual void setSpeed(float level)
+    public void setSpeed(float level)
     {
 
     }
@@ -17,12 +17,12 @@ public class MovingPlatformDynamicBindingBC
 public class MovingPlatformDynamicBinding : MovingPlatformDynamicBindingBC
 {
     public float speed = 5f;
-    public override float getSpeed()
+    public float getSpeed()
     {
         return speed;
     }
 
-    public override void setSpeed(float level)
+    public void setSpeed(float level)
     {
         speed = level;
     }
