@@ -2461,12 +2461,15 @@ AudioSource:
     m_PostInfinity: 2
     m_RotationOrder: 4
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!1 &560607004 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3761584335467878439, guid: 6bfc8e08cb005499597344e67036aa2d, type: 3}
   m_PrefabInstance: {fileID: 1942435727}
   m_PrefabAsset: {fileID: 0}
 =======
+=======
+>>>>>>> Stashed changes
 --- !u!1 &564564155
 GameObject:
   m_ObjectHideFlags: 0
@@ -2562,6 +2565,9 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.6369705, y: 0.58818626}
   m_EdgeRadius: 0
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 --- !u!1 &593570264
 GameObject:
