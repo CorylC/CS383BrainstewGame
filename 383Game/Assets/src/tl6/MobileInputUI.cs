@@ -1,50 +1,58 @@
-/*using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine;
 
-public class MobileInputUI : MonoBehaviour
+// This makes the class creatable as a ScriptableObject via the Unity editor.
+[CreateAssetMenu(fileName = "PlayerController", menuName = "InputController/PlayerController")]
+public class MobileInputController : InputController
 {
-    public MobileInputController mobileInput;
+    // Public fields for UI buttons to modify
+    public bool jumpPressed = false;  // Set to true when jump button is pressed on mobile UI
+    public bool fastFallHeld = false; // Set to true when fast fall button is held on mobile UI
+    public float horizontalInput = 0f; // Set by mobile UI to simulate left/right movement
 
-    public Button jumpButton;
-    public Button fastFallButton;
-    public Button leftButton;
-    public Button rightButton;
-
-    private bool isLeftHeld = false;
-    private bool isRightHeld = false;
-
-    void Start()
+    // Public methods to modify the fields, for linking with UI buttons
+    public void SetJumpPressed(bool value)
     {
-        // Button tap listeners
-        jumpButton.onClick.AddListener(() => mobileInput.jumpPressed = true);
-
-        // Fast fall logic
-        fastFallButton.onClick.AddListener(() => {
-            mobileInput.fastFallHeld = true;
-            Invoke(nameof(ResetFastFall), 0.3f);
-        });
-
-        // Tap to move (can be extended to hold if needed)
-        leftButton.onClick.AddListener(() => isLeftHeld = true);
-        rightButton.onClick.AddListener(() => isRightHeld = true);
+        jumpPressed = value;
     }
 
-    void Update()
+    public void SetFastFallHeld(bool value)
     {
-        float horizontal = 0;
-        if (isLeftHeld) horizontal -= 1;
-        if (isRightHeld) horizontal += 1;
-
-        mobileInput.horizontalInput = horizontal;
-
-        // Reset each frame
-        isLeftHeld = false;
-        isRightHeld = false;
+        fastFallHeld = value;
     }
 
-    void ResetFastFall()
+    public void SetHorizontalInput(float value)
     {
-        mobileInput.fastFallHeld = false;
+        horizontalInput = value;
+    }
+
+    // Checks for jump input from either the mobile UI or keyboard.
+    public override bool RetrieveJumpInput()
+    {
+        bool result = jumpPressed ||
+                      Input.GetKeyDown(KeyCode.W) ||
+                      Input.GetKeyDown(KeyCode.Space) ||
+                      Input.GetKeyDown(KeyCode.UpArrow);
+
+        jumpPressed = false;  // Reset to prevent multiple triggers
+        return result;
+    }
+
+    // Checks for horizontal movement input.
+    public override float RetrieveMoveInput()
+    {
+        if (horizontalInput != 0)
+        {
+            return horizontalInput;  // Return mobile input if available
+        }
+
+        return Input.GetAxisRaw("Horizontal");  // Otherwise, fallback to keyboard input
+    }
+
+    // Checks for fast fall input from mobile UI or keyboard.
+    public override bool RetrieveFastFallInput()
+    {
+        return fastFallHeld ||
+               Input.GetKey(KeyCode.S) ||
+               Input.GetKey(KeyCode.DownArrow);
     }
 }
-*/

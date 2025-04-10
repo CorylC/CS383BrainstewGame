@@ -1,24 +1,36 @@
-/*using UnityEngine;
+using UnityEngine;
 
-[CreateAssetMenu(fileName = "PlayerController", menuName = "InputController/PlayerController")]
-public class MobileInputController : InputController
+public class MobileInputUI : MonoBehaviour
 {
-    public override bool RetrieveJumpInput()
+    public MobileInputController inputController;
+
+    public void OnJumpPressed()
     {
-        return Input.GetKeyDown(KeyCode.W) ||
-               Input.GetKeyDown(KeyCode.Space) ||
-               Input.GetKeyDown(KeyCode.UpArrow);
+        inputController.jumpPressed = true;
     }
 
-    public override float RetrieveMoveInput()
+    public void OnFastFallDown()
     {
-        return Input.GetAxisRaw("Horizontal");
+        inputController.fastFallHeld = true;
     }
 
-    public override bool RetrieveFastFallInput()
+    public void OnFastFallUp()
     {
-        return Input.GetKey(KeyCode.S) ||
-               Input.GetKey(KeyCode.DownArrow);
+        inputController.fastFallHeld = false;
+    }
+
+    public void MoveLeftDown()
+    {
+        inputController.horizontalInput = -1f;
+    }
+
+    public void MoveRightDown()
+    {
+        inputController.horizontalInput = 1f;
+    }
+
+    public void MoveReleased()
+    {
+        inputController.horizontalInput = 0f;
     }
 }
-*/
