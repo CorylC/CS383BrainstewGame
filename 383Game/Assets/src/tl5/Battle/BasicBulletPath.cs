@@ -12,7 +12,7 @@ public class BasicBulletPath : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         // Move the projectile in a fixed horizontal direction (right or left)
-        rb.linearVelocity = new Vector2(speed, 0); // Moves right. Use -speed for left.
+        rb.linearVelocity = new Vector2(-speed, 0); // Moves right. Use -speed for left.
     }
 
     // Update is called once per frame
@@ -28,6 +28,9 @@ public class BasicBulletPath : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("Player")){
+            Destroy(gameObject);
+        }
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Obstacle")){
             Destroy(gameObject);
         }
     }
