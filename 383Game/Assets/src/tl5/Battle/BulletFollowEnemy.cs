@@ -19,6 +19,8 @@ public class EnemyBulletScript : MonoBehaviour
 
         Vector3 direction = player.transform.position - transform.position;
         rb.linearVelocity = new Vector2(direction.x, direction.y).normalized * cannon.getSpeed();
+        float rot = Mathf.Atan2(-direction.y, -direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0, 0, rot);
     }
 
     // Update is called once per frame
