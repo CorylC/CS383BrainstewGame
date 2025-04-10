@@ -11,6 +11,10 @@ public class Boss1Move : StateMachineBehaviour
     public float atkRange = 15.0f;
     public float maintainDist = 3f;
 
+    private float timer;
+
+    public float fireRate = 1.0f;
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex){
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -32,9 +36,14 @@ public class Boss1Move : StateMachineBehaviour
 
         }
         if (Vector2.Distance(player.position, rb.position) <= atkRange){
+
+            //timer += Time.deltaTime;
+
+            //if(timer > fireRate){
+
+                animator.SetTrigger("Attack");
+            //}
             
-            
-            animator.SetTrigger("Attack");
         }
     }
 

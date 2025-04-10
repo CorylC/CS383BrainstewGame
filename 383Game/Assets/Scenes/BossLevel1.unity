@@ -879,7 +879,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.2368083, y: -0.09363365}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -889,7 +889,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 8.250552, y: 10.73802}
+  m_Size: {x: 8, y: 10}
   m_EdgeRadius: 0
 --- !u!212 &608808531
 SpriteRenderer:
@@ -1027,7 +1027,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   atkDmg: 25
   atkDmg2: 34
-  fireRate: 0.5
+  fireRate: 1
   Boss1Gun: {fileID: 1858858980}
   bulletPrefab: {fileID: 642627836708205525, guid: 2e0cc2b7f20497a4eb2982df686a6e55, type: 3}
 --- !u!114 &608808538
