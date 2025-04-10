@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7602952726585326600}
   - component: {fileID: 2087250238923845529}
   - component: {fileID: 6418415476274291406}
+  - component: {fileID: -7884481171093563414}
   m_Layer: 7
   m_Name: Box
   m_TagString: Enemy
@@ -222,3 +223,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 10
+--- !u!114 &-7884481171093563414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3761584335467878439}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a145e4c9895042f2925d1e91d603490, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5
