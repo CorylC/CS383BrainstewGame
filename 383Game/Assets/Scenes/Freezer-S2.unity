@@ -2861,8 +2861,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45d2898874418480f86275c83b5b0c17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 0}
-  bulletPos: {fileID: 0}
+  bullet: {fileID: 3761584335467878439, guid: 6bfc8e08cb005499597344e67036aa2d, type: 3}
+  bulletPos: {fileID: 46871167}
 --- !u!114 &1294358489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29482,17 +29482,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1718704972}
   m_CullTransparentMesh: 1
---- !u!114 &1764399518 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1680998354182090472, guid: e73d7190fb3d5c344ab778436bea1079, type: 3}
-  m_PrefabInstance: {fileID: 1658166000529396818}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1779449158
 GameObject:
   m_ObjectHideFlags: 0
@@ -29655,17 +29644,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1786728044 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1680998354182090472, guid: e73d7190fb3d5c344ab778436bea1079, type: 3}
-  m_PrefabInstance: {fileID: 156830177}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1830138413 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2528574644491137584, guid: 3b351a3b94ec5451a88e111e1b9ffcbb, type: 3}
@@ -29809,8 +29787,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c621c992dde21a44a6161466cc23c4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthSlider: {fileID: 1786728044}
-  backgroundSlider: {fileID: 1764399518}
 --- !u!1 &1858841102
 GameObject:
   m_ObjectHideFlags: 0
