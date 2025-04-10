@@ -2462,11 +2462,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &560607004 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3761584335467878439, guid: 6bfc8e08cb005499597344e67036aa2d, type: 3}
-  m_PrefabInstance: {fileID: 1942435727}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &593570264
 GameObject:
   m_ObjectHideFlags: 0
@@ -2859,7 +2854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45d2898874418480f86275c83b5b0c17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 560607004}
+  bullet: {fileID: 3761584335467878439, guid: 6bfc8e08cb005499597344e67036aa2d, type: 3}
   bulletPos: {fileID: 1477476322}
 --- !u!50 &667691328
 Rigidbody2D:
@@ -5962,8 +5957,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45d2898874418480f86275c83b5b0c17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 0}
-  bulletPos: {fileID: 0}
+  bullet: {fileID: 3761584335467878439, guid: 6bfc8e08cb005499597344e67036aa2d, type: 3}
+  bulletPos: {fileID: 1283656840}
 --- !u!50 &1233778167
 Rigidbody2D:
   serializedVersion: 5
