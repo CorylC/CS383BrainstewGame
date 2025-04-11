@@ -18,8 +18,19 @@ public class BoxArchPath : MonoBehaviour
             // Direction to player
             Vector2 direction = (player.transform.position - transform.position).normalized;
 
-            // Add force with both forward and upward components
-            Vector2 launchForce = new Vector2(direction.x * force, upwardForce);
+            // Check vertical difference
+            float verticalDifference = player.transform.position.y - transform.position.y;
+
+            // If player is above, increase upward force
+            float adjustedUpwardForce = upwardForce;
+
+            if (verticalDifference > 0)
+            {
+                adjustedUpwardForce += verticalDifference * 0.5f; // tweak multiplier as needed
+            }
+
+            // Final force
+            Vector2 launchForce = new Vector2(direction.x * force, adjustedUpwardForce);
             rb.AddForce(launchForce, ForceMode2D.Impulse);
         }
     }

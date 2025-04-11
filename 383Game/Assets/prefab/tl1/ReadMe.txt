@@ -9,3 +9,6 @@ The music folder holds background music for levels and boss themes. The specific
 
 SFX Folder:
 This folder contains all of the prefabs for sound effects used on triggers. There are more specific ranges documented in the audioManager.cs folder under tl1 src
+
+BoxArch:
+This is a prefab bullet for the box tosser enemy. It is built to be a slower, less difficult projectile.

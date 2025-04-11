@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class AudioManagerVolume
 {
-
-
     public virtual float getVolume()
     {
         return 1f;

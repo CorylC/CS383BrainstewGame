@@ -1712,7 +1712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70509c6ba3e7d5348a788c8ec3cadc14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1672561920}
+  bullet: {fileID: 3761584335467878439, guid: abad129baa9599e40a0b00dc6c3ae6c6, type: 3}
   bulletPos: {fileID: 1908064222}
   shakeDuration: 0.2
   shakeMagnitude: 0.1
@@ -9209,11 +9209,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6585864603742247101, guid: 6bfc8e08cb005499597344e67036aa2d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -97.2
+      value: -94.15
       objectReference: {fileID: 0}
     - target: {fileID: 6585864603742247101, guid: 6bfc8e08cb005499597344e67036aa2d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.73
+      value: 2.85
       objectReference: {fileID: 0}
     - target: {fileID: 6585864603742247101, guid: 6bfc8e08cb005499597344e67036aa2d, type: 3}
       propertyPath: m_LocalPosition.z
