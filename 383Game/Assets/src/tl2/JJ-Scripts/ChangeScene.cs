@@ -7,6 +7,11 @@ public class ChangeScene : MonoBehaviour
 {
     public void moveToScene(int sceneID)
     {
+        if(sceneID == 1)
+        {
+            AudioManager.playSound(SoundType.STARTGAME);
+        }
+
         SceneManager.LoadScene(sceneID); 
         //append this function to buttons for example
         //find scene ID list via Edit > Build Profiles

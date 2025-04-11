@@ -9,7 +9,9 @@ public enum SoundType
     JUMP,
     HURT,
     SHOOT,
-    CANNONSHOOT
+    CANNONSHOOT,
+    STARTGAME,
+    BUTTONCLICK
 }
 
 [RequireComponent(typeof(AudioSource))]
@@ -27,11 +29,19 @@ public class AudioManager : MonoBehaviour
     //[SerializeField] private float audioVolume = 1f;
 
     //quick list of ranges, maybe find better way to do this
-    private int[] soundlistRanges = {0, 1, 4, 5};
+    private int[] soundlistRanges = {0, 1, 4, 5, 6, 7};
 
     private void Awake()
     {
-        instance = this;
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+        {
+            Destroy(gameObject); // Prevent duplicates
+        }
     }
 
     //gets audio sources on startup
@@ -65,11 +75,19 @@ public class AudioManager : MonoBehaviour
                 soundNum = instance.soundlist[rand];
                 break;
             case SoundType.SHOOT:
-                rand = 4;
+                rand = instance.soundlistRanges[2];
                 soundNum = instance.soundlist[rand];
                 break;
             case SoundType.CANNONSHOOT:
-                rand = 5;
+                rand = instance.soundlistRanges[3];
+                soundNum = instance.soundlist[rand];
+                break;
+            case SoundType.STARTGAME:
+                rand = instance.soundlistRanges[4];
+                soundNum = instance.soundlist[rand];
+                break;
+            case SoundType.BUTTONCLICK:
+                rand = instance.soundlistRanges[5];
                 soundNum = instance.soundlist[rand];
                 break;
             default:
@@ -97,4 +115,9 @@ public class AudioManager : MonoBehaviour
         audioVolume = Mathf.Clamp(volume, 0.01f, 1f);
     }
     */
+
+    public void buttonSfx()
+    {
+        playSound(SoundType.BUTTONCLICK);
+    }
 }
