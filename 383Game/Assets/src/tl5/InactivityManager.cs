@@ -4,10 +4,25 @@ using UnityEngine.SceneManagement;
 
 public class InactivityManager : MonoBehaviour
 {
+    public static InactivityManager instance;
     public VideoPlayer videoPlayer; // Assign in the Inspector
     public GameObject videoCanvas; // Assign a UI canvas that holds the VideoPlayer
     private float inactivityTimer = 0f;
     public float inactivityThreshold = 30f; // 30 seconds
+
+    void Awake()
+    {
+        // If there's no instance yet, set this one
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);  // Make it persist across scenes
+        }
+        else
+        {
+            Destroy(gameObject);  // Destroy duplicates
+        }
+    }
 
     void Start()
     {
