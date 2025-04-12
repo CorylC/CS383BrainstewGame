@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Boss1Stats : MonoBehaviour
 {
@@ -32,7 +34,8 @@ public class Boss1Stats : MonoBehaviour
     {
         //player die logic and animation
         gameObject.SetActive(false);
+        SceneManager.LoadScene(8);
     }
 }
 
-//Taken from TL5 Enemy Stats.cs and (will be) modified to better suit the boss
+//Taken from TL5 Enemy Stats.cs and (very slightly) modified to better suit the boss

@@ -1114,11 +1114,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 608808528}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39b9b807a048d43d999cb988bcc457d3, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c98d2eb796bd1041be30b11e9eb16db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 350
-  maxHealth: 350
+  health: 400
+  maxHealth: 400
   baseAttackDmg: 10
 --- !u!1 &873587032
 GameObject:
