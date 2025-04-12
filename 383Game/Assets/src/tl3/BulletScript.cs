@@ -40,9 +40,14 @@ public class BulletScript : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             EnemyStats enemy = collision.GetComponent<EnemyStats>();  // Get EnemyStats script
+            Boss1Stats boss = collision.GetComponent<Boss1Stats>();  // Get Boss1Stats script
             if (enemy != null)
             {
                 enemy.TakeDamage(damage);  // Apply damage
+            }else if(boss != null){ 
+            
+                boss.TakeDamage(damage);
+
             }
         }
 

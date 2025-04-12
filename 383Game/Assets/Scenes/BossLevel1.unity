@@ -962,7 +962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffb1b99a81bf9a44eb982ed06054231b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 2001485638}
   isFlipped: 0
 --- !u!114 &608808537
 MonoBehaviour:
