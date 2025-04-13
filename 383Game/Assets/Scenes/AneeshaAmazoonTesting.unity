@@ -1665,11 +1665,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2512940120211093620, guid: e73d7190fb3d5c344ab778436bea1079, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2512940120211093620, guid: e73d7190fb3d5c344ab778436bea1079, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5971769215057182651, guid: e73d7190fb3d5c344ab778436bea1079, type: 3}
       propertyPath: m_Pivot.x
@@ -2437,7 +2437,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &512253477
 Transform:
   m_ObjectHideFlags: 0
@@ -2489,7 +2489,7 @@ Transform:
   m_GameObject: {fileID: 541477450}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.07, y: -3.24, z: 0.1017664}
+  m_LocalPosition: {x: 27.09, y: -3.44, z: 0.1017664}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4353,11 +4353,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2512940120211093620, guid: e73d7190fb3d5c344ab778436bea1079, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2512940120211093620, guid: e73d7190fb3d5c344ab778436bea1079, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5971769215057182651, guid: e73d7190fb3d5c344ab778436bea1079, type: 3}
       propertyPath: m_Pivot.x
@@ -4963,11 +4963,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2512940120211093620, guid: e73d7190fb3d5c344ab778436bea1079, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2512940120211093620, guid: e73d7190fb3d5c344ab778436bea1079, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5971769215057182651, guid: e73d7190fb3d5c344ab778436bea1079, type: 3}
       propertyPath: m_Pivot.x
@@ -6069,7 +6069,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1174659195
 Transform:
   m_ObjectHideFlags: 0
@@ -6447,11 +6447,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2512940120211093620, guid: e73d7190fb3d5c344ab778436bea1079, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2512940120211093620, guid: e73d7190fb3d5c344ab778436bea1079, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5971769215057182651, guid: e73d7190fb3d5c344ab778436bea1079, type: 3}
       propertyPath: m_Pivot.x
@@ -7755,6 +7755,7 @@ GameObject:
   - component: {fileID: 1430700437}
   - component: {fileID: 1430700436}
   - component: {fileID: 1430700435}
+  - component: {fileID: 1430700445}
   m_Layer: 7
   m_Name: GroundPatrol1
   m_TagString: Enemy
@@ -7927,7 +7928,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1430700433}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39b9b807a048d43d999cb988bcc457d3, type: 3}
   m_Name: 
@@ -8100,6 +8101,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1430700445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430700433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 338900ed525994317a42086d9ddf892e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialMaxHealth: 100
+  initialBaseAttackDmg: 10
 --- !u!1001 &1430767288
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -82233,11 +82248,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2512940120211093620, guid: e73d7190fb3d5c344ab778436bea1079, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2512940120211093620, guid: e73d7190fb3d5c344ab778436bea1079, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5971769215057182651, guid: e73d7190fb3d5c344ab778436bea1079, type: 3}
       propertyPath: m_Pivot.x
