@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Prefab Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            color: #00698f;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Player Prefab</h1>
+
+<h2>Player Prefab Video</h2>
+<p>To view the video, please download it from this link:</p>
+<a href="https://drive.google.com/uc?export=download&id=1cVpe_-UX5SQdZpAydPDapQr5j0kLJ8Jg" download="PlayerPrefab.mp4">Download Video (MP4)</a>
+
+
+<!-- Description -->
+<h2>Description</h2>
+<p>This prefab represents the main player character in the game Techdown, built using unity 6. It's useful when you add more scenes to the game and need to add a player to that new hierarchy without having to re-add all of its components or values over and over again. Additionally, any further updates to the prefab automatically applies across all scenes where its used, ensuring consistency and reducing repetitive setup. The prefab contains core player components namely:</p>
+
+<!-- Components -->
+<h2>Components</h2>
+<ol>
+    <li><b>BoxCollider2D</b>
+        <ul>
+            <li>Provides collision boundaries and physics interactions for the player, allowing it to interact with other objects in the game world.</li>
+        </ul>
+    </li>
+    <li><b>Rigidbody2D</b>
+        <ul>
+            <li>Manages the player’s physics-based movement to customize mass, gravity scale, collision detection (set at continuous), interpolate, and axis constraints (Z). Essential for applying forces and defining physics interactions in the game world.</li>
+        </ul>
+    </li>
+    <li><b>Animator</b>
+        <ul>
+            <li>Controls the Player’s animations, such as idle, move, jump, die, shoot, and more if added. This component manages state transitions and animation playback based on input or game logic.</li>
+        </ul>
+    </li>
+    <li><b>SpriteRenderer</b>
+        <ul>
+            <li>Displays the player’s visual representation (sprite) in the game world. Handles rendering the player’s appearance, including any animations or effects applied through the Animator.</li>
+        </ul>
+    </li>
+    <li><b>Player Controller Scripts</b>
+        <ul>
+            <li><b>CONTROLLER</b>: Manages input handling through a ScriptableObject (PlayerController), abstracting raw input into reusable methods (RetrieveMoveInput, RetrieveJumpInput, etc.)</li>
+            <li><b>Move</b>: Handles horizontal movement logic, using input from the CONTROLLER to update the player’s velocity</li>
+            <li><b>Jump</b>: Manages jumping mechanics, applying vertical forces based on input and gravity settings</li>
+            <li><b>PlayerStats</b>: Tracks player health, damage, and game-over logic, updating UI elements like health bars</li>
+        </ul>
+    </li>
+    <li><b>Additional Scripts</b>
+        <ul>
+            <li>Other scripts can be added to the Player Prefab easily, such as further combat logic, future capabilities, power-ups, or interactions with the game world.</li>
+        </ul>
+    </li>
+</ol>
+
+<!-- Setup Instructions -->
+<h2>Setup Instructions</h2>
+<p>To use this prefab in your scene:</p>
+<ol>
+    <li>Navigate to where this prefab is located under your Assets folder (e.g., Assets > Prefabs > tl2 > JJ).</li>
+    <li>Drag the Player Prefab into your scene or specific hierarchy spot.</li>
+    <li>Adjust the player’s position by moving the entire object.</li>
+    <li>Modify components as needed:
+        <ul>
+            <li>For example, adjust the BoxCollider2D bounds by clicking the "Edit Collider" button and dragging its edges.</li>
+            <li>Test the player in Play mode to confirm desired behavior.</li>
+        </ul>
+    </li>
+</ol>
+
+<p><b>Important Note:</b> If you already have a player object in your hierarchy but want to use this one instead, still follow the instructions above but ensure that any other objects referencing the original player are updated to reference the prefab player object instead.</p>
+
+<!-- Creating Your Own Prefab -->
+<h2>Creating Your Own Prefab</h2>
+<p>To turn an existing player object into a prefab:</p>
+<ol>
+    <li>Navigate to your desired location under the Assets folder (e.g., a folder named ‘Prefabs’).</li>
+    <li>Right-click and select Create > Prefab. Name it, then drag your existing player object to that prefab and replace.</li>
+    <li>This approach ensures that other objects in your scene continue to reference the player without needing to reconfigure dependencies.</li>
+</ol>
+
+<!-- Requirements -->
+<h2>Requirements</h2>
+<p>Unity version: 6.0.0.33f1 or later.</p>
+
+<!-- Prefab Goals -->
+<h2>Prefab Goals In Summary</h2>
+<ol>
+    <li><b>Consistency Across Scenes</b>: Ensures the player behaves consistently across different scenes.</li>
+    <li><b>Easy Updates</b>: Changes to the prefab apply automatically to all instances, reducing maintenance time.</li>
+    <li><b>Reusability</b>: Easily reusable in other projects or scenes by dragging it into the new scene.</li>
+</ol>
+
+<!-- Common Questions and Answers -->
+<h2>Common Questions and Answers</h2>
+<p><b>Who Will Use This Prefab?</b> This prefab is intended for developers and designers working on the game Techdown. It simplifies adding the player character to new scenes while maintaining consistency across the game.</p>
+
+<p><b>Q: How do I add new abilities to the player?</b> Create additional scripts that interact with existing components (e.g., adding a Shoot script that uses the CONTROLLER for input).</p>
+
+<p><b>Q: How do I adjust the player's movement speed?</b> Best way is to edit the prefab and use the component sliders available. Alternatively, modify the `_maxSpeed` variable in the Move script.</p>
+
+</body>
+</html>
