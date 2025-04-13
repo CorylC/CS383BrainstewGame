@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 
-public class BulletStressTest
+public class BulletStressTestAmazoon
 {
     private GameObject bulletPrefab;
     private GameObject player;
@@ -15,7 +15,7 @@ public class BulletStressTest
     [UnitySetUp]
     public IEnumerator SetUp()
     {
-        SceneManager.LoadScene("Freezer-S2");
+        SceneManager.LoadScene("Amazoon-S3");
         yield return null;  // Wait a frame for scene load
 
         bulletPrefab = Resources.Load<GameObject>(prefabPath);
