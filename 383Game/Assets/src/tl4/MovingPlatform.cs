@@ -1,17 +1,23 @@
 using UnityEngine;
 
+/*
+This script is attached to the MovingPlatform game object, as well as the moving traps in the game.
+The platform moves between two points (posA and posB) at a specified speed.
+Then the player can take the platform to move between the two points.
+*/
+
 public class MovingPlatform : MonoBehaviour
 {
 
-    public Transform posA, posB;
-    private MovingPlatformDynamicBindingBC speed;
-    Vector2 targetPos;
+    public Transform posA, posB; // The two positions the platform will move between
+    private MovingPlatformDynamicBindingBC speed; // The speed of the platform
+    Vector2 targetPos; // The target position the platform is moving towards
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        speed = new MovingPlatformDynamicBinding();
+        speed = new MovingPlatformDynamicBinding(); // Initialize the speed object
         speed.setSpeed(5f);
         targetPos = posB.position;
     }
