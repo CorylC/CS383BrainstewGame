@@ -8,7 +8,7 @@ public class InactivityManager : MonoBehaviour
     public VideoPlayer videoPlayer; // Assign in the Inspector
     public GameObject videoCanvas; // Assign a UI canvas that holds the VideoPlayer
     private float inactivityTimer = 0f;
-    public float inactivityThreshold = 10f; // 30 seconds
+    public float inactivityThreshold = 10f; // 10 seconds
 
     void Awake()
     {
@@ -46,7 +46,7 @@ public class InactivityManager : MonoBehaviour
             inactivityTimer += Time.deltaTime;
         }
 
-        // If inactive for 30 seconds, start demo
+        // If inactive for 10 seconds, start demo
         if (inactivityTimer >= inactivityThreshold)
         {
             StartDemo();
@@ -66,5 +66,14 @@ public class InactivityManager : MonoBehaviour
         videoCanvas.SetActive(false);
         videoPlayer.Stop();
         inactivityTimer = 0f; // Reset timer
+    }
+
+    public void ResetInactivity()
+    {
+        inactivityTimer = 0f;
+        if (videoCanvas != null && videoCanvas.activeSelf)
+        {
+            StopDemo();
+        }
     }
 }

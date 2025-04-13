@@ -12,6 +12,10 @@ public class InactivitySetup : MonoBehaviour
         {
             InactivityManager.instance.videoCanvas = videoCanvas;
             InactivityManager.instance.videoPlayer = videoPlayer;
+
+            // Stop any lingering demo state
+            InactivityManager.instance.ResetInactivity();
         }
     }
+    
 }
