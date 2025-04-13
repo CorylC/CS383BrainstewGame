@@ -29,7 +29,7 @@ public class EnemyStatsPrivatePattern : MonoBehaviour
 
     void Update()
     {
-        // update health bar or UI here
+        
     }
 
     public void TakeDamage(float damage)
