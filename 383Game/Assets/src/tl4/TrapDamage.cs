@@ -23,9 +23,9 @@ public class TrapDamage : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            PlayerStats playerStats = other.GetComponent<PlayerStats>();
-            targetRB = other.GetComponent<Rigidbody2D>();
-            //Rigidbody2D rb = collision.GetComponent<Rigidbody2D>();
+            PlayerStats playerStats = other.GetComponent<PlayerStats>(); // Get the PlayerStats component from the player
+            targetRB = other.GetComponent<Rigidbody2D>(); // Get the Rigidbody2D component from the player
+            
             if(playerStats != null && targetRB != null) // Check if the player has PlayerStats component
             {
                 playerInTrap = true; // Set the flag to true when the player enters the trap

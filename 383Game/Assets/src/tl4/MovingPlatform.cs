@@ -25,18 +25,18 @@ public class MovingPlatform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Vector2.Distance(transform.position, posB.position) < 0.1f) targetPos = posA.position;
+        if(Vector2.Distance(transform.position, posB.position) < 0.1f) targetPos = posA.position; // Check if the platform is close to posB, if so, set targetPos to posA
 
-        if(Vector2.Distance(transform.position, posA.position) < 0.1f) targetPos = posB.position;
+        if(Vector2.Distance(transform.position, posA.position) < 0.1f) targetPos = posB.position; // Check if the platform is close to posA, if so, set targetPos to posB
 
-        transform.position = Vector2.MoveTowards(transform.position, targetPos, speed.getSpeed() * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, targetPos, speed.getSpeed() * Time.deltaTime); // Move the platform towards the target position at the specified speed
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Player"))
         {
-            other.transform.SetParent(this.transform);
+            other.transform.SetParent(this.transform); // Set the player as a child of the platform
         }
     }
 
@@ -44,7 +44,7 @@ public class MovingPlatform : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            other.transform.SetParent(null);
+            other.transform.SetParent(null); // Remove the player from the platform's parent
         }
     }
 
