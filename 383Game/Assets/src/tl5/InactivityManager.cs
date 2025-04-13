@@ -8,7 +8,7 @@ public class InactivityManager : MonoBehaviour
     public VideoPlayer videoPlayer; // Assign in the Inspector
     public GameObject videoCanvas; // Assign a UI canvas that holds the VideoPlayer
     private float inactivityTimer = 0f;
-    public float inactivityThreshold = 10f; // 0 seconds
+    public float inactivityThreshold = 10f; // 10 seconds
 
     void Awake()
     {
