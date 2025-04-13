@@ -18,7 +18,7 @@ public class MovingPlatform : MonoBehaviour
     void Start()
     {
         speed = new MovingPlatformDynamicBinding(); // Initialize the speed object
-        speed.setSpeed(5f);
+        //speed.setSpeed(5f);
         targetPos = posB.position;
     }
 

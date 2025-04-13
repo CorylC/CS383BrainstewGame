@@ -4,7 +4,7 @@ public class MovingPlatformDynamicBindingBC
 {
     public virtual float getSpeed()
     {
-        return 4;
+        return 0;
     }
 
     public virtual void setSpeed(float level)
