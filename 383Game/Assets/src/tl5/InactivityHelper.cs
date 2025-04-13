@@ -17,5 +17,4 @@ public class InactivitySetup : MonoBehaviour
             InactivityManager.instance.ResetInactivity();
         }
     }
-    
 }
