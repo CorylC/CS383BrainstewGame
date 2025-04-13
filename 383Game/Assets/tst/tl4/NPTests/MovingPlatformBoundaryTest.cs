@@ -4,10 +4,16 @@ using UnityEngine;
 using UnityEngine.TestTools;
 using UnityEngine.SceneManagement;
 
+
+/*
+This test checks if the MovingPlatform is bound to the correct movement range defined by posA and posB.
+It ensures that the platform does not move outside the bounds set by these two points.
+*/
+
 public class PlatformBoundTest
 {
-    private MovingPlatform platform;
-    private Transform posA, posB;
+    private MovingPlatform platform; // The platform to be tested
+    private Transform posA, posB; // The two waypoints defining the movement range
 
     [OneTimeSetUp]
     public void Setup()
@@ -29,14 +35,14 @@ public class PlatformBoundTest
         yield return new WaitForSeconds(1f);  // Adjust wait time as needed
 
         // Find the platform and waypoints in the scene
-        platform = platform = Object.FindFirstObjectByType<MovingPlatform>();
-        posA = GameObject.Find("posA")?.transform;
-        posB = GameObject.Find("posB")?.transform;
+        platform = platform = Object.FindFirstObjectByType<MovingPlatform>(); // Find the first instance of MovingPlatform in the scene
+        posA = GameObject.Find("posA")?.transform; // Find the transform of posA
+        posB = GameObject.Find("posB")?.transform; // Find the transform of posB
 
         // Ensure objects exist
-        Assert.IsNotNull(platform, " Platform not found in scene!");
-        Assert.IsNotNull(posA, " posA not found!");
-        Assert.IsNotNull(posB, " posB not found!");
+        Assert.IsNotNull(platform, " Platform not found in scene!"); // Check if the platform is found
+        Assert.IsNotNull(posA, " posA not found!"); // Check if posA is found
+        Assert.IsNotNull(posB, " posB not found!"); // Check if posB is found
 
         // Wait for the platform to move
         yield return new WaitForSeconds(3f);
