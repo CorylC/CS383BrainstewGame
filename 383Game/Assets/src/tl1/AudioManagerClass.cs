@@ -5,6 +5,7 @@ public class AudioManagerVolume
 {
     public virtual float getVolume()
     {
+        Debug.Log("Using the static form of binding, setting to 1f");
         return 1f;
     }
 
@@ -19,6 +20,7 @@ public class DynamicAudioManagerVolume : AudioManagerVolume
     public float volume = 1f;
     public override float getVolume()
     {
+        Debug.Log("Using the dynamic form of binding, setting to " + volume);
         return volume;
     }
 

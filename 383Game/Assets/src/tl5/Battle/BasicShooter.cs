@@ -25,7 +25,7 @@ public class BasicShooter : MonoBehaviour
     {
 
         float distance = Vector2.Distance(transform.position, player.transform.position);
-        Debug.Log(distance);
+        //Debug.Log(distance);
         timer += Time.deltaTime;
         if(timer > 4){
         timer = 0;

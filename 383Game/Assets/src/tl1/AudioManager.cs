@@ -18,7 +18,7 @@ public enum SoundType
 public class AudioManager : MonoBehaviour
 {
     //calls soundlist from scene
-    public DynamicAudioManagerVolume audioVolume;
+    public AudioManagerVolume audioVolume;
     [SerializeField] private AudioClip[] soundlist;
     public static AudioManager instance;
     private AudioSource audioSource;
@@ -93,23 +93,13 @@ public class AudioManager : MonoBehaviour
             default:
                 return;
         }
-        //old method of random sound ranges if case function breaks for some reason
-        /**
-        if (sound == SoundType.HURT)
-        {
-            int rand = Random.Range(1, 4);
-            Debug.Log("The random is: " + rand);
-            soundNum = instance.soundlist[rand];
-        }
-        else
-        {
-            soundNum = instance.soundlist[(int)sound];
-        }
-        */
+
+        //Plays the Sound
+        //instance.audioVolume.setVolume(.5f);
         instance.audioSource.PlayOneShot(soundNum, volume * instance.audioVolume.getVolume());
     }
 
-    /**
+    /** Outdated method from before dynamic binding, included still for reference
     public void SetVolume(float volume)
     {
         audioVolume = Mathf.Clamp(volume, 0.01f, 1f);
