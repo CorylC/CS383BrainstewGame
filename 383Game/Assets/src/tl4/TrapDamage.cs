@@ -5,6 +5,28 @@ using System.Collections;
 This script is attached to the trap game object.
 When the player enters the trap, it applies damage over time and slows down the player.
 When the player exits the trap, it stops applying damage and removes the slowing effect.
+
+Trap Damage script uses the observer pattern because the built-in functions of Unity such as OnTriggerEnter2D and OnTriggerExit2D
+are Unity's way of notifying the script when a player enters or exits the trap. This follows the observer pattern because there is
+a dependency on the player object, and the trap is observing the player's state (whether they are inside or outside the trap).
+
+The script also uses the decorator pattern because by modifying the player's state (applying damage over time and slowing down the player),
+it dynamically adds behavior to the player while inside the trap zone. The intent of the decorator pattern is to add functionality
+to an object without modifying its structure. 
+
+My patterns are work great together because the observer pattern allows the trap to react to the player's state changes (entering and exiting the trap),
+while the decorator pattern allows the trap to modify the player's behavior (applying damage and slowing down) without changing the player's class or structure. 
+
+I could have used the state pattern or the command pattern as well, but the observer pattern is more suitable for this case 
+because the trap is observing the player's state (entering and exiting the trap) and reacting to it. It would be a bad time to use the 
+state pattern because the trap is not a state of the player, it is an external object that affects the player. The command pattern would also 
+be a bad time to use because the trap is not issuing commands to the player,
+it is modifying the player's state directly.
+
+I could use state pattern if I wanted to create different states for the trap itself (e.g., active, inactive, triggered) and have the trap 
+change its behavior based on its state.
+The command pattern would be more suitable if I wanted to create a system where the trap could issue commands to the player (e.g., "take damage",
+ "slow down") and have the player respond to those commands.
 */
 
 public class TrapDamage : MonoBehaviour
