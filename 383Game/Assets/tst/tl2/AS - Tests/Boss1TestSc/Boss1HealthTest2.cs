@@ -20,14 +20,14 @@ public class Boss1HealthTest2
         // Use the Assert class to test conditions.
         // Use yield to skip a frame.
 
-        var boss1Obj = GameObject.FindObjectOfType<EnemyStats>();
+        var boss1Obj = GameObject.FindObjectOfType<Boss1Stats>();
         Assert.NotNull(boss1Obj, "Boss1 is missing");
 
         boss1Obj.health += 10;
 
         boss1Obj.TakeDamage(10);
         yield return null;
-        Assert.AreEqual(500, boss1Obj.health, $"Boss Health: {boss1Obj.health}");
+        Assert.AreEqual(400, boss1Obj.health, $"Boss Health: {boss1Obj.health}");
         yield return null;
 
         

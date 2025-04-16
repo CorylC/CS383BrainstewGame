@@ -20,7 +20,7 @@ public class Boss1HealthTest
         // Use the Assert class to test conditions.
         // Use yield to skip a frame.
 
-        var boss1Obj = GameObject.FindObjectOfType<EnemyStats>();
+        var boss1Obj = GameObject.FindObjectOfType<Boss1Stats>();
         Assert.NotNull(boss1Obj, "Boss1 is missing");
 
         while (boss1Obj.health >= 10)
