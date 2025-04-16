@@ -3,7 +3,7 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-//test to ensure player is constructed with required components
+//test to ensure player is made with req components
 public class PInstantiate
 {
     [Test]

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LeverBase
+public class LeverBase //super class
 {
     public virtual void ChangeScene()
     {
@@ -9,7 +9,7 @@ public class LeverBase
     }
 }
 
-public class LeverDynamic : LeverBase
+public class LeverDynamic : LeverBase //sub class
 {
     private int sceneID;
 
@@ -18,7 +18,7 @@ public class LeverDynamic : LeverBase
         this.sceneID = sceneID;
     }
 
-    public override void ChangeScene()
+    public override void ChangeScene() //virtual function
     {
         Debug.Log("Dynamic class method called. Changing to scene ID: " + sceneID);
         MockChangeScene(sceneID);

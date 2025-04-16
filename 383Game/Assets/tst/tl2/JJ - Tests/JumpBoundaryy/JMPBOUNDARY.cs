@@ -3,6 +3,7 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 
+//test if jump results in correct velocity changes/bounds
 public class JmpBoundary
 {
     public class DummyJumpInput : InputController

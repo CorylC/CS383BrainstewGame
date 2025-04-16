@@ -10,12 +10,13 @@ public class StaticLeverCollision : MonoBehaviour
     {
         if (col.collider.CompareTag(collideTag))
         {
+            //maybe some lever pushed animation
             ChangeSceneStatic(2); //static bound method call
             gameObject.SetActive(false);
         }
     }
 
-    void ChangeSceneStatic(int sceneID)
+    void ChangeSceneStatic(int sceneID) //this would be called
     {
         Debug.Log("Static method called. Changing to scene ID: " + sceneID);
         SceneManager.LoadScene(sceneID);

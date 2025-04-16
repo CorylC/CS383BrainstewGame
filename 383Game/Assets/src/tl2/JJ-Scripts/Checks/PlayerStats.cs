@@ -12,7 +12,8 @@ public class PlayerStats : MonoBehaviour
 
     void Start()
     {
-        health = maxHealth;
+        health = maxHealth; 
+        //make sure it starts at max health - bug between scenes maybe fixed here - dont fix till we have healing method
         UpdateHealthBar();
     }
 
@@ -42,7 +43,7 @@ public class PlayerStats : MonoBehaviour
     public void TakeDamage(float damage)
     {
         bool bcMode = PlayerPrefs.GetInt("BCMode",0) == 1;
-        if(!bcMode)
+        if(!bcMode) //update damage to health when not in bc mode
         {
             health -= damage; //need null check
             UpdateHealthBar();
@@ -62,7 +63,7 @@ public class PlayerStats : MonoBehaviour
 
     void Die()
     {
-        //player die logic and animation
+        //player die logic and animation when added
         gameObject.SetActive(false);
         TriggerGameOver();
     }
