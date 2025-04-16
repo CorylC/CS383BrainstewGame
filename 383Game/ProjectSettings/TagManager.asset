@@ -9,6 +9,7 @@ TagManager:
   - TutorialBoss
   - BossBulletTag
   - Object
+  - EnemyHealthBar
   layers:
   - Default
   - TransparentFX

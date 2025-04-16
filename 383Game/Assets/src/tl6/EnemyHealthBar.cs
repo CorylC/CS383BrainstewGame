@@ -50,29 +50,12 @@ public class EnemyHealthBar : MonoBehaviour
             // Instantly update the green bar
             healthSlider.value = healthPercentage;
 
-            // Smoothly reduce the red bar if it's still higher
-            if (backgroundSlider.value > healthSlider.value)
-            {
-                StartCoroutine(SmoothBackgroundUpdate());
-            }
+          
         }
     }
 
-    // Coroutine to gradually reduce the red background slider
-    private IEnumerator SmoothBackgroundUpdate()
-    {
-        // Slight delay before red bar starts falling
-        yield return new WaitForSeconds(0.2f);
-
-        // Slowly bring the red bar down until it matches the green one
-        while (backgroundSlider.value > healthSlider.value)
-        {
-            backgroundSlider.value = Mathf.Lerp(backgroundSlider.value, healthSlider.value, Time.deltaTime * 5);
-            yield return null;
-        }
-    }
-}
-
+   
+ }
 
 
 
