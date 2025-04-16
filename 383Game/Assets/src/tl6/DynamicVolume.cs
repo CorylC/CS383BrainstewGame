@@ -1,16 +1,31 @@
 using UnityEngine;
 
-public class DynamicVolume : MonoBehaviour
+public class VolumeControlDynamicBindingBC
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public virtual bool ShouldBeOn()
     {
-        
+        // Default behavior (virtual): toggle is OFF
+        return false;
     }
 
-    // Update is called once per frame
-    void Update()
+    public virtual void SetVolume(bool isOn)
     {
-        
+        // Optional: override if you want to store state
     }
 }
+
+
+public class VolumeControlDynamicBinding : VolumeControlDynamicBindingBC
+{
+    public override bool ShouldBeOn()
+    {
+        // Override behavior: toggle is ON (muted)
+        return true;
+    }
+
+    public override void SetVolume(bool isOn)
+    {
+        // Optional: store mute state
+    }
+}
+
