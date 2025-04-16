@@ -17,11 +17,17 @@ to an object without modifying its structure.
 My patterns are work great together because the observer pattern allows the trap to react to the player's state changes (entering and exiting the trap),
 while the decorator pattern allows the trap to modify the player's behavior (applying damage and slowing down) without changing the player's class or structure. 
 
-I could have used the state pattern or the command pattern as well, but the observer pattern is more suitable for this case 
-because the trap is observing the player's state (entering and exiting the trap) and reacting to it. It would be a bad time to use the 
-state pattern because the trap is not a state of the player, it is an external object that affects the player. The command pattern would also 
-be a bad time to use because the trap is not issuing commands to the player,
-it is modifying the player's state directly.
+State pattern is best when an object's behavior changes based on its internal state like idle, activated, cooldown, disabled. Using the state
+pattern would mean encapsulating each of those behaviors in its own class.
+
+Command pattern is best when you want to encapsulate a request or action as an object, ideal for decouploing the sender and receiver. This would be
+the best approach if I could do this project again. The trap would trigger a command to apply damage and/or slow down the player, the player's
+system would execute that command.
+
+I could have used the State or Command patterns, but the Observer pattern is more suitable for this case because the trap listens (observes) for changes in 
+the player's presence—whether the player enters or exits the trap’s area—and responds accordingly. The trap does not represent a state of the 
+player (this would be the State pattern), nor is it actively sending commands (like the Command pattern); instead, it reacts passively based 
+on the player's behavior, making the Observer pattern the most appropriate choice.
 
 I could use state pattern if I wanted to create different states for the trap itself (e.g., active, inactive, triggered) and have the trap 
 change its behavior based on its state.
