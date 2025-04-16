@@ -13,6 +13,8 @@ public class BulletScript : MonoBehaviour
         mainCam = Camera.main;
         rb = GetComponent<Rigidbody2D>();
 
+        Destroy(gameObject, 0.9f); // destroys bullet after 0.5 seconds
+
         // Get mouse position in world space
         mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0;
