@@ -2,9 +2,6 @@ using UnityEngine;
 using System.Collections;
 
 /*
-This script is attached to the trap game object.
-When the player enters the trap, it applies damage over time and slows down the player.
-When the player exits the trap, it stops applying damage and removes the slowing effect.
 
 Trap Damage script uses the observer pattern because the built-in functions of Unity such as OnTriggerEnter2D and OnTriggerExit2D
 are Unity's way of notifying the script when a player enters or exits the trap. This follows the observer pattern because there is
@@ -35,6 +32,12 @@ The command pattern would be more suitable if I wanted to create a system where 
  "slow down") and have the player respond to those commands.
 */
 
+
+/*
+This script is attached to the trap game object.
+When the player enters the trap, it applies damage over time and slows down the player.
+When the player exits the trap, it stops applying damage and removes the slowing effect.
+*/
 public class TrapDamage : MonoBehaviour
 {
     [SerializeField] private float damage; // The amount of damage the trap deals to the player
