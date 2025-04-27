@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bullet Prefab Documentation</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        h2 { border-bottom: 2px solid #ccc; }
+        .section { margin-bottom: 20px; }
+        .component { margin-left: 20px; }
+        .important { color: red; }
+    </style>
+</head>
+<body>
+
+    <h1>Bullet Prefab Documentation</h1>
+
+    <div class="section">
+        <h2>Description</h2>
+        <p>This prefab represents the bullet object used in the player's weapon system. It handles movement, hit detection, and visual effects when a bullet is fired. Any updates to this prefab automatically apply across all weapon systems using it.</p>
+    </div>
+
+    <div class="section">
+        <h2>Bullet Prefab Video</h2>
+        <p>To view the video, please download it from this link:</p>
+        <p><a href="Prefab.mkv" download>Prefab Download</a></p>
+    </div>
+
+
+    <div class="section">
+        <h2>Components</h2>
+
+        <div class="component">
+            <h3>Bullet (Script)</h3>
+            <ul>
+                <li><strong>Speed:</strong> Controls how fast the bullet travels (default: 15).</li>
+                <li><strong>Damage:</strong> The amount of health deducted from the enemy on hit (default: 50).</li>
+                <li><strong>Lifetime:</strong> How long the bullet exists before despawning (default: 0.2 seconds).</li>
+            </ul>
+        </div>
+
+        <div class="component">
+            <h3>Sprite Renderer</h3>
+            <ul>
+                <li>Displays the bullet sprite <code>Bullet_2_2_0</code>.</li>
+                <li>Can be customized to change the bullet's appearance.</li>
+            </ul>
+        </div>
+
+        <div class="component">
+            <h3>Rigidbody2D</h3>
+            <ul>
+                <li><strong>Body Type:</strong> Dynamic.</li>
+                <li><strong>Gravity Scale:</strong> 0 (no gravity effect).</li>
+                <li>Enables the bullet to move via physics without falling.</li>
+            </ul>
+        </div>
+
+        <div class="component">
+            <h3>Capsule Collider 2D</h3>
+            <ul>
+                <li>Defines the collision boundary of the bullet.</li>
+                <li>Used for detecting collisions with enemies or obstacles.</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <h2>Setup Instructions</h2>
+        <ol>
+            <li>Drag the <strong>Bullet 2</strong> prefab into your Gun script’s Bullet Prefab slot.</li>
+            <li>Adjust speed, damage, or lifetime in the Bullet (Script) component as needed.</li>
+            <li>Ensure that the Muzzle Flash and Fire Point are properly assigned in the gun hierarchy.</li>
+            <li>Playtest the weapon to confirm bullets behave as expected.</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>Requirements</h2>
+        <p>Unity version: 6.0.0.33f1 or later.</p>
+    </div>
+
+    <div class="section">
+        <h2>Prefab Goals In Summary</h2>
+        <ul>
+            <li><strong>Consistency:</strong> Ensures bullet behavior is uniform across all weapons.</li>
+            <li><strong>Easy Updates:</strong> Changes to the prefab auto-apply where used.</li>
+            <li><strong>Reusability:</strong> Drop into other weapons, scenes, or projects easily.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Common Questions and Answers</h2>
+        <p><strong>Q: How do I change bullet visuals?</strong><br>
+        A: Swap the sprite inside the Sprite Renderer or adjust its color and material settings.</p>
+
+        <p><strong>Q: How do I make the bullet last longer?</strong><br>
+        A: Increase the Lifetime value in the Bullet (Script).</p>
+
+        <p><strong>Q: Can the bullet pierce enemies?</strong><br>
+        A: Yes, by adjusting logic inside the Bullet script to allow multiple hits before destruction.</p>
+    </div>
+
+</body>
+</html>

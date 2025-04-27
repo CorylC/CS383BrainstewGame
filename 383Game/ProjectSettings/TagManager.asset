@@ -9,6 +9,8 @@ TagManager:
   - TutorialBoss
   - BossBulletTag
   - Object
+  - Shell
+  - MuzzleFlash
   layers:
   - Default
   - TransparentFX
