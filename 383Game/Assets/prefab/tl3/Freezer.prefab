@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5859992726044329190}
   - component: {fileID: 2573442607708821625}
   m_Layer: 0
-  m_Name: Bullet 2
+  m_Name: Freezer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -168,4 +168,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 15
   damage: 50
-  lifetime: 0.2
+  lifetime: 0.4
