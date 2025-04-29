@@ -9,6 +9,7 @@ public class EnemyStats : MonoBehaviour
     public float maxHealth;
     public int baseAttackDmg = 10;
     public int point = 0;
+    public PointManager pointManager;
    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -35,8 +36,9 @@ public class EnemyStats : MonoBehaviour
 
     void Die()
     {
-        //player die logic and animation
         //send points to point manager
+        pointManager.AddPoints(point);
+        //player die logic and animation
         gameObject.SetActive(false);
     }
 }

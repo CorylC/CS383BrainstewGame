@@ -196,6 +196,8 @@ MonoBehaviour:
   health: 0
   maxHealth: 0
   baseAttackDmg: 10
+  point: 1
+  pointManager: {fileID: 2979163706492268491, guid: f042772c5d4644f55a80f8b013c57cb2, type: 3}
 --- !u!114 &6418415476274291406
 MonoBehaviour:
   m_ObjectHideFlags: 0
