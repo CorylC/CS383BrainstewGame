@@ -327,6 +327,8 @@ MonoBehaviour:
   health: 100
   maxHealth: 100
   baseAttackDmg: 10
+  point: 10
+  pointManager: {fileID: 2979163706492268491, guid: f042772c5d4644f55a80f8b013c57cb2, type: 3}
 --- !u!114 &19500958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1332,6 +1334,8 @@ MonoBehaviour:
   health: 500
   maxHealth: 500
   baseAttackDmg: 10
+  point: 25
+  pointManager: {fileID: 2979163706492268491, guid: f042772c5d4644f55a80f8b013c57cb2, type: 3}
 --- !u!114 &176849410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2270,7 +2274,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 276573689}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39b9b807a048d43d999cb988bcc457d3, type: 3}
   m_Name: 
@@ -2278,6 +2282,8 @@ MonoBehaviour:
   health: 25
   maxHealth: 25
   baseAttackDmg: 15
+  point: 5
+  pointManager: {fileID: 2979163706492268491, guid: f042772c5d4644f55a80f8b013c57cb2, type: 3}
 --- !u!50 &276573693
 Rigidbody2D:
   serializedVersion: 5
@@ -2703,7 +2709,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341687774}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39b9b807a048d43d999cb988bcc457d3, type: 3}
   m_Name: 
@@ -2711,6 +2717,8 @@ MonoBehaviour:
   health: 25
   maxHealth: 25
   baseAttackDmg: 15
+  point: 5
+  pointManager: {fileID: 2979163706492268491, guid: f042772c5d4644f55a80f8b013c57cb2, type: 3}
 --- !u!50 &341687778
 Rigidbody2D:
   serializedVersion: 5
@@ -3463,7 +3471,7 @@ Transform:
   m_GameObject: {fileID: 439139697}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20.31, y: -3.33, z: 0.1017664}
+  m_LocalPosition: {x: -22.55, y: -3.26, z: 0.1017664}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4159,7 +4167,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 549344515}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39b9b807a048d43d999cb988bcc457d3, type: 3}
   m_Name: 
@@ -4167,6 +4175,8 @@ MonoBehaviour:
   health: 25
   maxHealth: 25
   baseAttackDmg: 15
+  point: 5
+  pointManager: {fileID: 2979163706492268491, guid: f042772c5d4644f55a80f8b013c57cb2, type: 3}
 --- !u!50 &549344519
 Rigidbody2D:
   serializedVersion: 5
@@ -4903,7 +4913,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 667691324}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39b9b807a048d43d999cb988bcc457d3, type: 3}
   m_Name: 
@@ -4911,6 +4921,8 @@ MonoBehaviour:
   health: 25
   maxHealth: 25
   baseAttackDmg: 15
+  point: 15
+  pointManager: {fileID: 2979163706492268491, guid: f042772c5d4644f55a80f8b013c57cb2, type: 3}
 --- !u!114 &667691327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5832,6 +5844,8 @@ MonoBehaviour:
   health: 50
   maxHealth: 50
   baseAttackDmg: 10
+  point: 3
+  pointManager: {fileID: 2979163706492268491, guid: f042772c5d4644f55a80f8b013c57cb2, type: 3}
 --- !u!114 &802472044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7176,6 +7190,8 @@ MonoBehaviour:
   health: 100
   maxHealth: 100
   baseAttackDmg: 10
+  point: 10
+  pointManager: {fileID: 2979163706492268491, guid: f042772c5d4644f55a80f8b013c57cb2, type: 3}
 --- !u!114 &992577433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8349,6 +8365,8 @@ MonoBehaviour:
   health: 50
   maxHealth: 50
   baseAttackDmg: 10
+  point: 3
+  pointManager: {fileID: 2979163706492268491, guid: f042772c5d4644f55a80f8b013c57cb2, type: 3}
 --- !u!82 &1111713208
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8900,7 +8918,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1233778163}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39b9b807a048d43d999cb988bcc457d3, type: 3}
   m_Name: 
@@ -8908,6 +8926,8 @@ MonoBehaviour:
   health: 0
   maxHealth: 0
   baseAttackDmg: 10
+  point: 15
+  pointManager: {fileID: 2979163706492268491, guid: f042772c5d4644f55a80f8b013c57cb2, type: 3}
 --- !u!114 &1233778166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9257,7 +9277,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1252251750}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39b9b807a048d43d999cb988bcc457d3, type: 3}
   m_Name: 
@@ -9265,6 +9285,8 @@ MonoBehaviour:
   health: 25
   maxHealth: 25
   baseAttackDmg: 15
+  point: 5
+  pointManager: {fileID: 2979163706492268491, guid: f042772c5d4644f55a80f8b013c57cb2, type: 3}
 --- !u!50 &1252251754
 Rigidbody2D:
   serializedVersion: 5
@@ -9697,6 +9719,8 @@ MonoBehaviour:
   health: 50
   maxHealth: 50
   baseAttackDmg: 10
+  point: 3
+  pointManager: {fileID: 2979163706492268491, guid: f042772c5d4644f55a80f8b013c57cb2, type: 3}
 --- !u!114 &1271918845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12859,6 +12883,8 @@ MonoBehaviour:
   health: 50
   maxHealth: 50
   baseAttackDmg: 10
+  point: 3
+  pointManager: {fileID: 2979163706492268491, guid: f042772c5d4644f55a80f8b013c57cb2, type: 3}
 --- !u!114 &1725188579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14277,6 +14303,8 @@ MonoBehaviour:
   health: 100
   maxHealth: 100
   baseAttackDmg: 10
+  point: 10
+  pointManager: {fileID: 2979163706492268491, guid: f042772c5d4644f55a80f8b013c57cb2, type: 3}
 --- !u!114 &1855718151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15966,6 +15994,8 @@ MonoBehaviour:
   health: 50
   maxHealth: 50
   baseAttackDmg: 10
+  point: 3
+  pointManager: {fileID: 2979163706492268491, guid: f042772c5d4644f55a80f8b013c57cb2, type: 3}
 --- !u!114 &2045681141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16433,6 +16463,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1911102890}
     - target: {fileID: 3476839098763156942, guid: f49810e7dcdd545528ed6830381860a9, type: 3}
+      propertyPath: point
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476839098763156942, guid: f49810e7dcdd545528ed6830381860a9, type: 3}
       propertyPath: health
       value: 100
       objectReference: {fileID: 0}
@@ -16440,6 +16474,10 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 3476839098763156942, guid: f49810e7dcdd545528ed6830381860a9, type: 3}
+      propertyPath: pointManager
+      value: 
+      objectReference: {fileID: 2979163706492268491, guid: f042772c5d4644f55a80f8b013c57cb2, type: 3}
     - target: {fileID: 3611899318719211820, guid: f49810e7dcdd545528ed6830381860a9, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -16549,6 +16587,8 @@ MonoBehaviour:
   health: 25
   maxHealth: 25
   baseAttackDmg: 15
+  point: 5
+  pointManager: {fileID: 2979163706492268491, guid: f042772c5d4644f55a80f8b013c57cb2, type: 3}
 --- !u!50 &2084671406
 Rigidbody2D:
   serializedVersion: 5
@@ -17129,14 +17169,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2141638027}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39b9b807a048d43d999cb988bcc457d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  maxHealth: 0
+  health: 30
+  maxHealth: 30
   baseAttackDmg: 10
+  point: 5
+  pointManager: {fileID: 2979163706492268491, guid: f042772c5d4644f55a80f8b013c57cb2, type: 3}
 --- !u!50 &2141638031
 Rigidbody2D:
   serializedVersion: 5
