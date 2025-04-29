@@ -2850,7 +2850,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1294358483}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39b9b807a048d43d999cb988bcc457d3, type: 3}
   m_Name: 
@@ -2858,6 +2858,8 @@ MonoBehaviour:
   health: 1000
   maxHealth: 1000
   baseAttackDmg: 10
+  point: 5
+  pointManager: {fileID: 1955964700}
 --- !u!114 &1294358490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38429,7 +38431,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1208403132}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39b9b807a048d43d999cb988bcc457d3, type: 3}
   m_Name: 
@@ -38437,6 +38439,8 @@ MonoBehaviour:
   health: 100
   maxHealth: 100
   baseAttackDmg: 10
+  point: 20
+  pointManager: {fileID: 1955964700}
 --- !u!114 &1830138415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38702,6 +38706,51 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3850072285542119713, guid: f49810e7dcdd545528ed6830381860a9, type: 3}
   m_PrefabInstance: {fileID: 1966134373669556040}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1955964699
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1955964701}
+  - component: {fileID: 1955964700}
+  m_Layer: 0
+  m_Name: PointManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1955964700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955964699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d7ee22af66ad476fa0462779dd388d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  total_points: 0
+--- !u!4 &1955964701
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955964699}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.232964, y: -6.736893, z: -0.14987783}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1967687910
 GameObject:
   m_ObjectHideFlags: 0
@@ -39616,17 +39665,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1603883553}
     - target: {fileID: 3476839098763156942, guid: f49810e7dcdd545528ed6830381860a9, type: 3}
+      propertyPath: point
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476839098763156942, guid: f49810e7dcdd545528ed6830381860a9, type: 3}
       propertyPath: health
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3476839098763156942, guid: f49810e7dcdd545528ed6830381860a9, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3476839098763156942, guid: f49810e7dcdd545528ed6830381860a9, type: 3}
       propertyPath: maxHealth
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 3476839098763156942, guid: f49810e7dcdd545528ed6830381860a9, type: 3}
+      propertyPath: pointManager
+      value: 
+      objectReference: {fileID: 1955964700}
     - target: {fileID: 3850072285542119713, guid: f49810e7dcdd545528ed6830381860a9, type: 3}
       propertyPath: m_Name
       value: GroundEnemy
@@ -40005,3 +40062,4 @@ SceneRoots:
   - {fileID: 1564461058}
   - {fileID: 1655511845}
   - {fileID: 720772767}
+  - {fileID: 1955964701}

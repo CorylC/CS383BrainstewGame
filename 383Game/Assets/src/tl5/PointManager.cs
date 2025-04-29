@@ -2,15 +2,12 @@ using UnityEngine;
 
 public class PointManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public static PointManager instance;
+    public int total_points = 0;
 
-    // Update is called once per frame
-    void Update()
+    public void AddPoints(int points)
     {
-        
+        total_points += points;
+        Debug.Log("Total Points: " + total_points);
     }
 }
