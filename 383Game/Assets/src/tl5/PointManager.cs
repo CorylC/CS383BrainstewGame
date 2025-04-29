@@ -3,7 +3,7 @@ using UnityEngine;
 public class PointManager : MonoBehaviour
 {
     public static PointManager instance;
-    public int total_points = 0;
+    protected private static int total_points = 0;
 
     public void AddPoints(int points)
     {
