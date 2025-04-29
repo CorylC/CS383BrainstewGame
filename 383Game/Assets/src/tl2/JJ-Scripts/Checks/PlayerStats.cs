@@ -4,6 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
+
+    //bug fix: persist health across all scenes
+    public static float persistHealth = -1f;
     public float health = 100f;
     public float maxHealth = 100f;
     public int baseAttackDmg = 10;
@@ -12,8 +15,11 @@ public class PlayerStats : MonoBehaviour
 
     void Start()
     {
-        health = maxHealth; 
-        //make sure it starts at max health - bug between scenes maybe fixed here - dont fix till we have healing method
+        if(persistHealth < 0f){
+            health = maxHealth;
+        }else{
+            health = persistHealth;
+        }
         UpdateHealthBar();
     }
 
@@ -21,12 +27,12 @@ public class PlayerStats : MonoBehaviour
     void Update()
     {
         UpdateHealthBar();
+        persistHealth = health;
 
-        if(health <= 0)
+        if(health <= 0f)
         {
             //player die animation
-            Destroy(gameObject);
-            //trigger game over screen
+            Die();
         }
     }
 
@@ -48,7 +54,7 @@ public class PlayerStats : MonoBehaviour
             health -= damage; //need null check
             UpdateHealthBar();
 
-            if(health <= 0)
+            if(health <= 0f)
             {
                 Die();
             }
