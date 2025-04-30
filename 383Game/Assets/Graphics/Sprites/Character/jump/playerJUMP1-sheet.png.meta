@@ -1,10 +1,25 @@
 fileFormatVersion: 2
-guid: 447e79ae5d05fe24abc09c505f0fdf3f
+guid: c63c677d141b7ed4daa44c12852a1e5f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5367977972909270615
-    second: playerDEATH6_0
+      213: -7097884349533360272
+    second: playerJUMP1-sheet_0
+  - first:
+      213: -2076018332542901651
+    second: playerJUMP1-sheet_1
+  - first:
+      213: -516032629690555300
+    second: playerJUMP1-sheet_2
+  - first:
+      213: -6631004266165690649
+    second: playerJUMP1-sheet_3
+  - first:
+      213: -6480592563251664389
+    second: playerJUMP1-sheet_4
+  - first:
+      213: 3507087776386003067
+    second: playerJUMP1-sheet_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -97,19 +112,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -126,13 +128,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: playerDEATH6_0
+      name: playerJUMP1-sheet_0
       rect:
         serializedVersion: 2
-        x: 53
-        y: 41
+        x: 65
+        y: 17
         width: 122
-        height: 158
+        height: 242
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +143,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9a91f92797c1185b0800000000000000
-      internalID: -5367977972909270615
+      spriteID: 07f62415acf3f7d90800000000000000
+      internalID: -7097884349533360272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerJUMP1-sheet_1
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 11
+        width: 116
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d62e49563508033e0800000000000000
+      internalID: -2076018332542901651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerJUMP1-sheet_2
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 47
+        width: 122
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c54a8ceae0fa6d8f0800000000000000
+      internalID: -516032629690555300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerJUMP1-sheet_3
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 53
+        width: 146
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ee1813a0c0f9f3a0800000000000000
+      internalID: -6631004266165690649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerJUMP1-sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 53
+        width: 152
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf9a85d366f4016a0800000000000000
+      internalID: -6480592563251664389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerJUMP1-sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1481
+        y: 23
+        width: 158
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b703a9350cdaba030800000000000000
+      internalID: 3507087776386003067
       vertices: []
       indices: 
       edges: []
@@ -160,8 +272,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      playerDEATH6_0: -5367977972909270615
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
