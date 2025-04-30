@@ -9,9 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62ab52baf3380f44da034f9efa4d9307, type: 3}
-  m_Name: MobiileInputController
+  m_Script: {fileID: 11500000, guid: 6daa8994debbc084d98e13926cdb61e9, type: 3}
+  m_Name: MobileController
   m_EditorClassIdentifier: 
-  jumpPressed: 0
-  fastFallHeld: 0
-  horizontalInput: 0
