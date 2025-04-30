@@ -10,4 +10,7 @@ public class PointManager : MonoBehaviour
         total_points += points;
         Debug.Log("Total Points: " + total_points);
     }
+    public int GetPoints(){
+        return total_points;
+    }
 }
