@@ -1,8 +1,13 @@
 using UnityEngine;
 
+<<<<<<< Updated upstream
 // This makes the class creatable as a ScriptableObject via the Unity editor.
 [CreateAssetMenu(fileName = "PlayerController", menuName = "InputController/PlayerController")]
 public class MobileInputController : InputController
+=======
+<<<<<<< Updated upstream
+public class MobileInputUI : MonoBehaviour
+>>>>>>> Stashed changes
 {
     // Public fields for UI buttons to modify
     public bool jumpPressed = false;  // Set to true when jump button is pressed on mobile UI
@@ -22,6 +27,7 @@ public class MobileInputController : InputController
 
     public void SetHorizontalInput(float value)
     {
+<<<<<<< Updated upstream
         horizontalInput = value;
     }
 
@@ -54,5 +60,32 @@ public class MobileInputController : InputController
         return fastFallHeld ||
                Input.GetKey(KeyCode.S) ||
                Input.GetKey(KeyCode.DownArrow);
+=======
+        mobileInput.fastFallHeld = false;
+=======
+[CreateAssetMenu(fileName = "MobileController", menuName = "InputController/MobileController")]
+public class MobileController : InputController
+{
+    public override bool RetrieveJumpInput()
+    {
+        // Return and then reset, to mimic single-tap jump
+        if (MobileInputUIManager.Instance.isJumpPressed)
+        {
+            MobileInputUIManager.Instance.isJumpPressed = false;
+            return true;
+        }
+        return false;
+    }
+
+    public override float RetrieveMoveInput()
+    {
+        return MobileInputUIManager.Instance.moveDirection;
+    }
+
+    public override bool RetrieveFastFallInput()
+    {
+        return false; // No fast fall for now (will become shoot later)
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
     }
 }
