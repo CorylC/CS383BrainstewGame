@@ -13,6 +13,20 @@ public class PlayerStats : MonoBehaviour
     //could add defense or speed 
     public Image healthBar;
 
+    void Awake(){
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+    void OnDestroy(){
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+    //reset health whenever MainMenu(0) or FirstLevel (1) loads
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode){
+        if(scene.buildIndex == 0 || scene.buildIndex == 1){
+            persistHealth = maxHealth;
+            health = maxHealth;
+            UpdateHealthBar();
+        }
+    }
     void Start()
     {
         if(persistHealth < 0f){
@@ -70,6 +84,9 @@ public class PlayerStats : MonoBehaviour
     void Die()
     {
         //player die logic and animation when added
+        if(PointManager.instance != null){
+            PointManager.instance.ResetPoints();
+        }
         gameObject.SetActive(false);
         TriggerGameOver();
     }
