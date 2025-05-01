@@ -780,24 +780,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &370429128 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2939328196573835765, guid: 3d4bfbf7558c7df4faad0b706895456c, type: 3}
-  m_PrefabInstance: {fileID: 2133808999}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &370429129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 370429128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18a6245d2aee41043859caf17be415fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shootingScript: {fileID: 0}
 --- !u!1 &371949884
 GameObject:
   m_ObjectHideFlags: 0
@@ -8069,18 +8051,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18a6245d2aee41043859caf17be415fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootingScript: {fileID: 2001485644}
---- !u!114 &2001485644 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4876786889815136622, guid: 2540a2cecfc9f7346b9a76ddb5a64642, type: 3}
-  m_PrefabInstance: {fileID: 2001485637}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2001485641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 789d353f96b36d041b3d2400ecad878b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2001485645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8229,29 +8199,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6559072506240206584, guid: 3d4bfbf7558c7df4faad0b706895456c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 370429129}
-    - target: {fileID: 6559072506240206584, guid: 3d4bfbf7558c7df4faad0b706895456c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnShootButtonPressed
-      objectReference: {fileID: 0}
     - target: {fileID: 8230525331671011375, guid: 3d4bfbf7558c7df4faad0b706895456c, type: 3}
       propertyPath: m_Name
       value: -----------Mobile----------------
       objectReference: {fileID: 0}
     - target: {fileID: 8230525331671011375, guid: 3d4bfbf7558c7df4faad0b706895456c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2939328196573835765, guid: 3d4bfbf7558c7df4faad0b706895456c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 370429129}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d4bfbf7558c7df4faad0b706895456c, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
