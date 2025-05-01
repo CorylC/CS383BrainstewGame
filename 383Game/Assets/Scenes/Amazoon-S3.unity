@@ -620,6 +620,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 794690327}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &44526983 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2939328196573835765, guid: 3d4bfbf7558c7df4faad0b706895456c, type: 3}
+  m_PrefabInstance: {fileID: 1018727871}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &44526986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44526983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90080ff64989c0a489ed5ffd7aeb432e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &51400553 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2528574644491137584, guid: 3b351a3b94ec5451a88e111e1b9ffcbb, type: 3}
@@ -9201,7 +9218,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2939328196573835765, guid: 3d4bfbf7558c7df4faad0b706895456c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 44526986}
   m_SourcePrefab: {fileID: 100100000, guid: 3d4bfbf7558c7df4faad0b706895456c, type: 3}
 --- !u!1 &1019370839
 GameObject:
@@ -18003,6 +18023,18 @@ MonoBehaviour:
   shellEjectPoint: {fileID: 0}
   muzzleFlashPrefab: {fileID: 0}
   firePoint: {fileID: 1450346611}
+  shootingScript: {fileID: 1911102896}
+--- !u!114 &1911102896 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4876786889815136622, guid: 2540a2cecfc9f7346b9a76ddb5a64642, type: 3}
+  m_PrefabInstance: {fileID: 1911102889}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911102893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 789d353f96b36d041b3d2400ecad878b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1912542024
 GameObject:
   m_ObjectHideFlags: 0

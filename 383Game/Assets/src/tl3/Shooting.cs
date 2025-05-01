@@ -49,4 +49,14 @@ public class Shooting : MonoBehaviour
             AudioManager.playSound(SoundType.SHOOT);
         }
     }
+ public void Shoot()
+    {
+        if (canFire)
+        {
+            canFire = false;
+            Instantiate(bullet, bulletTransform.position, Quaternion.identity);
+            AudioManager.playSound(SoundType.SHOOT);
+        }
+    }
 }
+

@@ -1,30 +1,23 @@
 using UnityEngine;
 
-public class MobileShootRelay : MonoBehaviour
+public class MobileShootButton : MonoBehaviour
 {
-    private Shooting shooting;
+    [Tooltip("Drag in the GameObject that has your teammate’s Shooting script")]
+    public Shooting shootingScript;
 
-    void Start()
+    public void OnShootButtonPressed()
     {
-        shooting = FindObjectOfType<Shooting>();
-    }
-
-    void Update()
-    {
-        if (PauseManager.isPaused || shooting == null)
-            return;
-
-        if (Input.touchCount > 0)
+        // Duplicate their firing logic using the same public fields
+        if (shootingScript.canFire)
         {
-            Touch touch = Input.GetTouch(0);
-
-            // Fire on touch began
-            if (touch.phase == TouchPhase.Began && shooting.canFire)
-            {
-                shooting.canFire = false;
-                Instantiate(shooting.bullet, shooting.bulletTransform.position, Quaternion.identity);
-                AudioManager.playSound(SoundType.SHOOT);
-            }
+            shootingScript.canFire = false;
+            Instantiate(
+                shootingScript.bullet,
+                shootingScript.bulletTransform.position,
+                Quaternion.identity
+            );
+            AudioManager.playSound(SoundType.SHOOT);
         }
     }
 }
+
