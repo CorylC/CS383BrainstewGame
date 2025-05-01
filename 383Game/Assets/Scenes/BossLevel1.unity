@@ -1253,6 +1253,8 @@ MonoBehaviour:
   health: 400
   maxHealth: 400
   baseAttackDmg: 10
+  point: 100
+  pointManager: {fileID: 929396442}
 --- !u!1 &776350757
 GameObject:
   m_ObjectHideFlags: 0
@@ -1443,6 +1445,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6376582382806258448, guid: fa0914298bc7ed04f8787939f26cc398, type: 3}
+      propertyPath: pm
+      value: 
+      objectReference: {fileID: 929396442}
     - target: {fileID: 8709674530603006681, guid: fa0914298bc7ed04f8787939f26cc398, type: 3}
       propertyPath: m_Name
       value: Score
@@ -1684,6 +1690,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95669765af7cf1f468669ca85057e3e1, type: 3}
+--- !u!114 &929396442 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8325558378062693024, guid: 95669765af7cf1f468669ca85057e3e1, type: 3}
+  m_PrefabInstance: {fileID: 929396441}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d7ee22af66ad476fa0462779dd388d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &966118126
 PrefabInstance:
   m_ObjectHideFlags: 0
