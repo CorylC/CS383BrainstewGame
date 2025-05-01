@@ -65,7 +65,8 @@ public class PlayerStats : MonoBehaviour
         bool bcMode = PlayerPrefs.GetInt("BCMode",0) == 1;
         if(!bcMode) //update damage to health when not in bc mode
         {
-            
+            health -= damage;
+            UpdateHealthBar();
 
             if(health <= 0f)
             {
