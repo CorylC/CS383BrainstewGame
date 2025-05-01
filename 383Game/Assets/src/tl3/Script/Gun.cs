@@ -48,43 +48,6 @@ public class Gun : MonoBehaviour
         }
     }
 
-    /* public void Fire()
-     {
-         if (currentMode == GunMode.Normal)
-         {
-             Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-         }
-         else if (currentMode == GunMode.Laser)
-         {
-             Instantiate(laserBulletPrefab, firePoint.position, firePoint.rotation);
-         }
-         else if (currentMode == GunMode.Shotgun)
-         {
-             ShootSpread();
-         }
-         else if (currentMode == GunMode.RapidFire)
-         {
-             Instantiate(rapidFireBulletPrefab, firePoint.position, firePoint.rotation);
-         }
-
-         // Tracer effect (optional)
-         Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-         mouseWorldPosition.z = 0f;
-         WeaponTracer.Create(firePoint.position, mouseWorldPosition);
-
-         // Muzzleflash
-         if (muzzleFlashPrefab != null)
-         {
-             Instantiate(muzzleFlashPrefab, firePoint.position, firePoint.rotation);
-         }
-
-         // Shell Eject
-         if (shellPrefab != null && shellEjectPoint != null)
-         {
-             Instantiate(shellPrefab, shellEjectPoint.position, shellEjectPoint.rotation);
-         }
-     }
-    */
 
     public void Fire()
     {
@@ -105,6 +68,10 @@ public class Gun : MonoBehaviour
 
         Debug.Log("✅ Firing prefab: " + prefabToUse.name);
         Instantiate(prefabToUse, firePoint.position, firePoint.rotation);
+
+        // 🔊 Play gun sound
+        AudioManager.playSound(SoundType.SHOOT);
+
 
         if (muzzleFlashPrefab != null)
         {
@@ -135,3 +102,44 @@ public class Gun : MonoBehaviour
         }
     }
 }
+
+
+
+
+/* public void Fire()
+ {
+     if (currentMode == GunMode.Normal)
+     {
+         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+     }
+     else if (currentMode == GunMode.Laser)
+     {
+         Instantiate(laserBulletPrefab, firePoint.position, firePoint.rotation);
+     }
+     else if (currentMode == GunMode.Shotgun)
+     {
+         ShootSpread();
+     }
+     else if (currentMode == GunMode.RapidFire)
+     {
+         Instantiate(rapidFireBulletPrefab, firePoint.position, firePoint.rotation);
+     }
+
+     // Tracer effect (optional)
+     Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+     mouseWorldPosition.z = 0f;
+     WeaponTracer.Create(firePoint.position, mouseWorldPosition);
+
+     // Muzzleflash
+     if (muzzleFlashPrefab != null)
+     {
+         Instantiate(muzzleFlashPrefab, firePoint.position, firePoint.rotation);
+     }
+
+     // Shell Eject
+     if (shellPrefab != null && shellEjectPoint != null)
+     {
+         Instantiate(shellPrefab, shellEjectPoint.position, shellEjectPoint.rotation);
+     }
+ }
+*/
