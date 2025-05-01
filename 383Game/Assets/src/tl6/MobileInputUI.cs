@@ -20,3 +20,4 @@ public class MobileInputUIManager : MonoBehaviour
     public void RightButtonDown() => moveDirection = 1;
     public void MoveButtonUp() => moveDirection = 0;
 }
+

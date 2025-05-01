@@ -5,13 +5,7 @@ public class MobileController : InputController
 {
     public override bool RetrieveJumpInput()
     {
-        // Return and then reset, to mimic single-tap jump
-        if (MobileInputUIManager.Instance.isJumpPressed)
-        {
-            MobileInputUIManager.Instance.isJumpPressed = false;
-            return true;
-        }
-        return false;
+        return MobileInputUIManager.Instance.isJumpPressed;
     }
 
     public override float RetrieveMoveInput()
@@ -21,6 +15,6 @@ public class MobileController : InputController
 
     public override bool RetrieveFastFallInput()
     {
-        return false; // No fast fall for now (will become shoot later)
+        return false; // Replaced with shoot button logic (not needed for now)
     }
 }
