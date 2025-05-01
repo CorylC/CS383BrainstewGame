@@ -7,6 +7,9 @@ public class Boss1Stats : MonoBehaviour
     public float health;
     public float maxHealth;
     public int baseAttackDmg = 10;
+    public int point = 0;
+
+    public PointManager pointManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -32,7 +35,8 @@ public class Boss1Stats : MonoBehaviour
 
     void Die()
     {
-        //player die logic and animation
+        //send points to point manager
+        pointManager.AddPoints(point);
         gameObject.SetActive(false);
         SceneManager.LoadScene(8);
     }
