@@ -56,22 +56,22 @@ public class PlayerAimWeapon : MonoBehaviour
         // Apply rotation
         aimTransform.eulerAngles = new Vector3(0, 0, angle);
 
-        // Calculate direction to mouse
-        Vector3 localScale = Vector3.one;
-        if (angle > 90 || angle < -90)
+        // Flip logic (only flip if crossing 90° or -90°)
+        if (Mathf.Abs(angle) > 90f)
         {
-            localScale.y = -1f;
+            // If aiming left, flip the sprite but keep rotation correct
+            aimTransform.localScale = new Vector3(1, -1, 1);
         }
         else
         {
-            localScale.y = +1f;
+            // If aiming right, normal scale
+            aimTransform.localScale = Vector3.one;
         }
-        aimTransform.localScale = localScale;
     }
 
-    
 
-private void HandleShooting()
+
+    private void HandleShooting()
     {
         // If left mouse button is pressed
         if (Input.GetMouseButtonDown(0))
