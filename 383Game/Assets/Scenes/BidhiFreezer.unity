@@ -364,7 +364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6014730426772627057, guid: e73d7190fb3d5c344ab778436bea1079, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6953138533318333967, guid: e73d7190fb3d5c344ab778436bea1079, type: 3}
       propertyPath: m_Color.b
@@ -1374,8 +1374,8 @@ Transform:
   m_GameObject: {fileID: 364177095}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.2605, y: 0.0178, z: 0}
-  m_LocalScale: {x: 0.5403485, y: 0.48093528, z: 1}
+  m_LocalPosition: {x: 1.41, y: -0.049, z: 0}
+  m_LocalScale: {x: 6.3469577, y: 4.940552, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 801812178}
@@ -1424,7 +1424,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4319395737909131107, guid: 13e638699fe1bc74daf2a4b7d81b44d3, type: 3}
+  m_Sprite: {fileID: 1930804609, guid: 880d8ad0c75b44f4bbb40f3dbbc7df68, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1491,7 +1491,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &447174772
 Transform:
   m_ObjectHideFlags: 0
@@ -2436,7 +2436,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &819698340
 Transform:
   m_ObjectHideFlags: 0
@@ -2625,7 +2625,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &922341264
 Transform:
   m_ObjectHideFlags: 0
@@ -3074,7 +3074,7 @@ Transform:
   m_GameObject: {fileID: 1191991519}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.4259949, y: 0.1210022, z: 0}
+  m_LocalPosition: {x: 1.78, y: 0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -38609,7 +38609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shellPrefab: {fileID: 0}
   shellEjectPoint: {fileID: 0}
-  muzzleFlashPrefab: {fileID: 2610088986244371447, guid: de80c115c9c6f2240a776fccc38c5e68, type: 3}
+  muzzleFlashPrefab: {fileID: 0}
   firePoint: {fileID: 1191991520}
 --- !u!1 &1620781059
 GameObject:
@@ -38940,7 +38940,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6014730426772627057, guid: e73d7190fb3d5c344ab778436bea1079, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7563522593877424228, guid: e73d7190fb3d5c344ab778436bea1079, type: 3}
       propertyPath: m_Name

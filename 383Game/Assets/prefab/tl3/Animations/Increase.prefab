@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8453561182959798531}
   - component: {fileID: 2551265730386270441}
   m_Layer: 0
-  m_Name: RapidBoss
+  m_Name: Increase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -8712778243190278716, guid: 1227f2aa3da24574f909fe9036259967, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.9418583, a: 1}
+  m_Color: {r: 0.91907847, g: 1, b: 0.009433806, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -189,6 +189,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d245d9f26579da745a55f6e932f614f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
-  damage: 30
+  speed: 70
+  damage: 70
   lifetime: 2
