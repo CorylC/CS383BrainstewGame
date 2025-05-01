@@ -1131,7 +1131,7 @@ Transform:
   m_GameObject: {fileID: 301149404}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.78, y: 0.05, z: 0}
+  m_LocalPosition: {x: 0.346, y: -0.002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1647,7 +1647,7 @@ Transform:
   m_GameObject: {fileID: 371863369}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.711, y: 0.038, z: 0}
+  m_LocalPosition: {x: 0.568, y: 0.036, z: 0}
   m_LocalScale: {x: 0.321818, y: 0.2610525, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2939,7 +2939,7 @@ Transform:
   m_GameObject: {fileID: 1062966909}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.407, y: -0.036, z: 0}
+  m_LocalPosition: {x: 0.296, y: -0.036, z: 0}
   m_LocalScale: {x: 1.7467972, y: 1.9476546, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -40038,15 +40038,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2292852863010080794, guid: 2540a2cecfc9f7346b9a76ddb5a64642, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.6
+      value: 2.8
       objectReference: {fileID: 0}
     - target: {fileID: 2292852863010080794, guid: 2540a2cecfc9f7346b9a76ddb5a64642, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.6
+      value: 2.8
       objectReference: {fileID: 0}
     - target: {fileID: 2292852863010080794, guid: 2540a2cecfc9f7346b9a76ddb5a64642, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.6
+      value: 2.8
       objectReference: {fileID: 0}
     - target: {fileID: 2292852863010080794, guid: 2540a2cecfc9f7346b9a76ddb5a64642, type: 3}
       propertyPath: m_LocalPosition.x
@@ -41249,7 +41249,7 @@ PrefabInstance:
       objectReference: {fileID: 1603883561}
     - target: {fileID: 5907222118759137166, guid: f49810e7dcdd545528ed6830381860a9, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6791434159515333903, guid: f49810e7dcdd545528ed6830381860a9, type: 3}
       propertyPath: data.dataString

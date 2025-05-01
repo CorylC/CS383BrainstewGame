@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 9109763323557769054}
   m_Layer: 0
   m_Name: LaserBullet 1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
-  damage: 10
+  damage: 18
   lifetime: 2
 --- !u!50 &7592219896166214579
 Rigidbody2D:

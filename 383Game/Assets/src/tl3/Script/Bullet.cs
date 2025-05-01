@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
@@ -19,7 +19,7 @@ public class Bullet : MonoBehaviour
         // Get the Rigidbody2D component attached to this bullet
         rb = GetComponent<Rigidbody2D>();
 
-        // Set the bullet's velocity in the direction it�s facing
+        // Set the bullet's velocity in the direction it’s facing
         rb.linearVelocity = transform.right * speed;
 
         // Automatically destroy the bullet after 'lifetime' seconds
@@ -28,24 +28,25 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        // Ignore collisions with the player
         if (collision.CompareTag("Player")) return;
 
-        // If the bullet hits an enemy, apply damage
+        // ✅ Check Enemy
         if (collision.CompareTag("Enemy"))
         {
-            // Try to get the EnemyStats script
             var enemy = collision.GetComponent<EnemyStats>();
-
-            // Try to get the Boss1Stats script (for larger enemies/bosses)
-            Boss1Stats boss = collision.GetComponent<Boss1Stats>();
-
-            // If the enemy has health logic, apply damage
             if (enemy != null)
                 enemy.TakeDamage(damage);
         }
 
-        // Destroy the bullet on any collision (except Player)
+        // ✅ Check Boss (regardless of tag)
+        var boss = collision.GetComponent<Boss1Stats>();
+        if (boss != null)
+        {
+            boss.TakeDamage(damage);
+        }
+
+        // Destroy bullet
         Destroy(gameObject);
     }
+
 }
