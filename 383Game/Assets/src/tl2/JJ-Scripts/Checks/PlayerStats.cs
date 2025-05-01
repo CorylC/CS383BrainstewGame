@@ -100,7 +100,7 @@ public class PlayerStats : MonoBehaviour
         //gameObject.SetActive(false);
         //TriggerGameOver();
 
-        Invoke(nameof(TriggerGameOver),1.7f); //check clip len
+        Invoke(nameof(TriggerGameOver),3.7f); //check clip len
     }
 
     void TriggerGameOver()
