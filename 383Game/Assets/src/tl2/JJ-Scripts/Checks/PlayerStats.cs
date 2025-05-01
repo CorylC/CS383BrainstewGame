@@ -87,8 +87,20 @@ public class PlayerStats : MonoBehaviour
         if(PointManager.instance != null){
             PointManager.instance.ResetPoints();
         }
-        gameObject.SetActive(false);
-        TriggerGameOver();
+
+        // play death animation
+        var animCtrl = GetComponent<PAnimatorController>();
+        if (animCtrl != null){
+            animCtrl.TriggerDeath();
+        }
+        // disable movement/jump so player stays in place
+        GetComponent<Move>().enabled  = false;
+        GetComponent<Jump>().enabled  = false;
+        GetComponent<CONTROLLER>().enabled = false;
+        //gameObject.SetActive(false);
+        //TriggerGameOver();
+
+        Invoke(nameof(TriggerGameOver),1.7f); //check clip len
     }
 
     void TriggerGameOver()
