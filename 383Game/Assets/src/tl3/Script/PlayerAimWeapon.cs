@@ -49,28 +49,29 @@ public class PlayerAimWeapon : MonoBehaviour
 
     private void HandleAiming()
     {
-        // Get mouse position in world space
         Vector3 mousePosition = UtilsClass.GetMouseWorldPosition();
-
-        // Calculate aiming direction based on mouse position
-        Vector3 aimDirection = (mousePosition - aimTransform.position).normalized;
+        Vector3 aimDirection = (mousePosition - transform.position).normalized;
         float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
 
-        // Rotate weapon to face the aim direction
+        // Apply rotation
         aimTransform.eulerAngles = new Vector3(0, 0, angle);
 
-        // Flip weapon sprite vertically if aiming left (to avoid upside-down sprites)
-        if (mousePosition.x < transform.position.x)
+        // Calculate direction to mouse
+        Vector3 localScale = Vector3.one;
+        if (angle > 90 || angle < -90)
         {
-            aimTransform.localScale = new Vector3(1, -1, 1);
+            localScale.y = -1f;
         }
         else
         {
-            aimTransform.localScale = new Vector3(1, 1, 1);
+            localScale.y = +1f;
         }
+        aimTransform.localScale = localScale;
     }
 
-    private void HandleShooting()
+    
+
+private void HandleShooting()
     {
         // If left mouse button is pressed
         if (Input.GetMouseButtonDown(0))
@@ -87,7 +88,7 @@ public class PlayerAimWeapon : MonoBehaviour
             if (muzzleFlashPrefab != null && firePoint != null)
             {
                 GameObject flash = Instantiate(muzzleFlashPrefab, firePoint.position, firePoint.rotation);
-                Destroy(flash, 0.05f); // Clean up effect after short time
+                Destroy(flash, 0.02f); // Clean up effect after short time
             }
 
             // Create weapon tracer line (visual effect for bullets)
