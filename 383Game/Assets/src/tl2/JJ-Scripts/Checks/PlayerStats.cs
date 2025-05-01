@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
+using System.Collections;
 public class PlayerStats : MonoBehaviour
 {
 
@@ -13,8 +13,19 @@ public class PlayerStats : MonoBehaviour
     //could add defense or speed 
     public Image healthBar;
 
+    //dmg visual settings
+    [SerializeField] private float flashDuration = 0.1f;
+    [SerializeField] private int flashCount = 3;
+    private SpriteRenderer spriteRenderer;
+    private Color originalColor;
+    private Coroutine flashRoutine;
+
     void Awake(){
         SceneManager.sceneLoaded += OnSceneLoaded;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        if(spriteRenderer != null){
+            originalColor = spriteRenderer.color;
+        }
     }
     void OnDestroy(){
         SceneManager.sceneLoaded -= OnSceneLoaded;
@@ -65,8 +76,7 @@ public class PlayerStats : MonoBehaviour
         bool bcMode = PlayerPrefs.GetInt("BCMode",0) == 1;
         if(!bcMode) //update damage to health when not in bc mode
         {
-            health -= damage; //need null check
-            UpdateHealthBar();
+            
 
             if(health <= 0f)
             {
@@ -88,19 +98,20 @@ public class PlayerStats : MonoBehaviour
             PointManager.instance.ResetPoints();
         }
 
-        // play death animation
         var animCtrl = GetComponent<PAnimatorController>();
-        if (animCtrl != null){
-            animCtrl.TriggerDeath();
-        }
-        // disable movement/jump so player stays in place
-        GetComponent<Move>().enabled  = false;
-        GetComponent<Jump>().enabled  = false;
-        GetComponent<CONTROLLER>().enabled = false;
-        //gameObject.SetActive(false);
-        //TriggerGameOver();
+    if (animCtrl != null)
+        animCtrl.TriggerDeath();
 
-        Invoke(nameof(TriggerGameOver),3.7f); //check clip len
+        // Disable components that might interfere
+        GetComponent<Move>().enabled = false;
+        GetComponent<Jump>().enabled = false;
+        GetComponent<CONTROLLER>().enabled = false;
+        GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero; // Stop movement
+
+        // Wait for the full animation length
+        Animator anim = GetComponent<Animator>();
+        float deathClipLength = anim.GetCurrentAnimatorStateInfo(0).length;
+        Invoke(nameof(TriggerGameOver), deathClipLength + 0.1f);
     }
 
     void TriggerGameOver()
